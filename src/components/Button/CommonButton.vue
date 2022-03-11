@@ -1,24 +1,34 @@
 <template>
-  <button>
+  <button :class="{ primary: isPrimary ? true : false }">
     <slot></slot>
   </button>
 </template>
 
 <script lang="ts">
-import { ref, defineComponent } from "vue";
+import { ref, defineComponent, computed, reactive, toRef } from "vue";
 export default defineComponent({
   name: "CommonButton",
   props: {
-    msg: String,
+    primary: Boolean,
   },
-  setup() {
-    const count = ref(0);
+  setup(props) {
+    props = reactive(props);
+    const isPrimary = toRef(props, "primary");
     return {
-      count,
+      isPrimary,
     };
   },
 });
 </script>
 
-<style>
+<style scoped lang="scss">
+button {
+  border: none;
+  padding: 0.5rem 2rem;
+  border-radius: 0.75rem;
+  background-color: var(--button-background);
+  filter: var(--drop-shadow);
+  box-shadow: var(--button-box-shadow);
+  cursor: pointer;
+}
 </style>

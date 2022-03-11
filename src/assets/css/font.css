@@ -1,6 +1,2 @@
 /* Nanum Gothic 400 700 800, Noto Sans KR 100 400 500 700*/
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Noto+Sans+KR:wght@100;400;500;700&display=swap');
-
-:root {
-    font-family: 'Nanum Gothic', 'Noto Sans KR', Times, Times New Roman, Georgia, serif;
-}

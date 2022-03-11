@@ -10,11 +10,12 @@
     --primary-800:#0078af;
     --primary-900:#005990;
     --card-background:#ffffff;
+    --button-background:#ffffff;
     --background:#F4F9F9;
     --on-background:#121212;
     --on-primary:#121212;
 }
-:root.dark {
+:root.darkmode {
     --primary-50: #fff8df;
     --primary-100:#ffebaf;
     --primary-200:#ffdf7b;
@@ -26,6 +27,7 @@
     --primary-800:#ff8a00;
     --primary-900:#ff6800;
     --card-background:#222831;
+    --button-background:#222831;
     --background:#222222;
     --on-background:#fefefe;
     --on-primary:#121212;

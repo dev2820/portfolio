@@ -1,11 +1,3 @@
-<script setup lang="ts">
-import { ref } from 'vue'
-
-defineProps<{ msg: string }>()
-
-const count = ref(0)
-</script>
-
 <template>
   <h1>{{ msg }}</h1>
 
@@ -32,10 +24,25 @@ const count = ref(0)
     <code>components/HelloWorld.vue</code> to test hot module replacement.
   </p>
 </template>
-
-<style scoped>
+<script lang="ts">
+import { ref, defineComponent } from "vue";
+export default defineComponent({
+  name: "HelloWorld",
+  props: {
+    msg: String,
+  },
+  setup() {
+    const count = ref(0);
+    return {
+      count,
+    };
+  },
+});
+</script>
+<style lang="scss" scoped>
+$test: "#333";
 a {
-  color: #42b983;
+  color: $test;
 }
 
 label {
