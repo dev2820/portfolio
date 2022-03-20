@@ -28,7 +28,12 @@ button {
   border-radius: 0.75rem;
   background-color: var(--button-background);
   filter: var(--drop-shadow);
-  box-shadow: var(--button-box-shadow);
+  box-shadow: var(--button-inner-shadow);
   cursor: pointer;
+
+  &.primary {
+    background: var(--primary-linear-gradient);
+    box-shadow: var(--primary-inner-shadow);
+  }
 }
 </style>
