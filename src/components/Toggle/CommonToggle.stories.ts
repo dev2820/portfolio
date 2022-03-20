@@ -5,7 +5,7 @@ export default {
   title: 'Toggle/CommonToggle',
 };
 
-const Template = (args:any) => ({
+export const Default = (args:any) => ({
     components: { CommonToggle },
     setup() {
         const onHandler = () => {
@@ -22,5 +22,19 @@ const Template = (args:any) => ({
     template: '<CommonToggle @on="onHandler" @off="offHandler"/>',
 });
 
-export const Default = Template.bind({});
-Default({});
+export const Checked = (args:any) => ({
+  components: { CommonToggle },
+  setup() {
+      const onHandler = () => {
+        action("toggle on")
+      };
+      const offHandler = () => {
+        action("toggle off")
+      };
+      return {
+        onHandler,
+        offHandler
+      };
+  },
+  template: '<CommonToggle @on="onHandler" @off="offHandler" checked/>',
+});
