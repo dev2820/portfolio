@@ -30,12 +30,12 @@ ul {
   flex-direction:row;
   list-style:none;
   padding:0;
-
+  margin:auto 0;
   li {
-    height:2.5rem;
-    padding:0 0.75rem;
+    padding:0.75rem 0;
+    margin: 0 0.75rem;
+    height:1rem;
     text-align:center;
-    line-height:2.5rem;
     transition:0.2s;
     border-bottom:0.25rem solid transparent;
     cursor:pointer;
