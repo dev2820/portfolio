@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" color-mode="dark">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" href="/favicon.ico" />
@@ -9,5 +9,13 @@
   <body>
     <div id="app"></div>
     <script type="module" src="/src/main.ts"></script>
+    <script>
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.setAttribute('color-mode', 'dark');
+      }
+      else {
+        document.documentElement.setAttribute('color-mode', 'light');
+      }
+    </script>
   </body>
 </html>
