@@ -35,11 +35,9 @@ export default defineComponent({
   },
 });
 </script>
-
 <style scoped lang="scss">
-
 label.switch {
-  position: relative;
+  position: absolute;
   display: inline-block;
   width: 3.5rem;
   height: 1.75rem;
