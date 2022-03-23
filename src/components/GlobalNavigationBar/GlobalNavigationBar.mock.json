@@ -1,0 +1,28 @@
+{
+    "anchor": [
+        {
+            "title":"Home",
+            "link":"#home"
+        },
+        {
+            "title":"About",
+            "link":"#about"
+        },
+        {
+            "title":"Skill",
+            "link":"#skill"
+        },
+        {
+            "title":"Career",
+            "link":"#career"
+        },
+        {
+            "title":"Projects",
+            "link":"#projects"
+        },
+        {
+            "title":"Contact",
+            "link":"#contact"
+        }
+    ]
+}
