@@ -39,6 +39,7 @@ input {
   display: none;
 }
 label.switch {
+  position: relative;
   display: inline-block;
   width: 3.5rem;
   height: 1.75rem;
