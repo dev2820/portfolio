@@ -37,14 +37,14 @@ export default defineComponent({
 </script>
 
 <style scoped lang="scss">
-input {
-  display: none;
-}
+
 label.switch {
-  position: relative;
   display: inline-block;
   width: 3.5rem;
   height: 1.75rem;
+  input {
+    display: none;
+  }
 }
 .slider {
   position: absolute;
