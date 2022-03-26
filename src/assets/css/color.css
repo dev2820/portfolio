@@ -29,6 +29,7 @@
   --background: #f4f9f9;
   --on-background: #121212;
   --on-primary: #121212;
+  --text-color: #121212;
 }
 :root[color-mode="dark"] {
   --primary-50: #fff8df;
@@ -46,4 +47,5 @@
   --background: #222222;
   --on-background: #fefefe;
   --on-primary: #121212;
+  --text-color: #fefefe;
 }
