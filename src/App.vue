@@ -1,43 +1,46 @@
 <template id="app">
   <span class="darkmode-toggle">
-    <darkmode-toggle class="darkmode-toggle" :checked="isOsDarkmode" @on="darkmodeHandler(true)" @off="darkmodeHandler(false)"/>
+    <darkmode-toggle class="darkmode-toggle" :checked="isDarkmode" @on="darkmodeHandler(true)" @off="darkmodeHandler(false)"/>
   </span>
   <header>
     <global-navigation-bar :anchors="anchor"/>
   </header>
   <main>
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
-    <p>what</p>
+    <HomeView :isDarkmode="isDarkmode"></HomeView>
   </main>
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent,ref,watch } from "vue";
 import { anchor } from "@/assets/meta.json"
 import HelloWorld from "@/components/HelloWorld.vue";
 import GlobalNavigationBar from "./components/GlobalNavigationBar/GlobalNavigationBar.vue";
 import DarkmodeToggle from "./components/Toggle/DarkmodeToggle.vue";
+import HomeView from "./views/HomeView.vue";
 export default defineComponent({
   components: {
     HelloWorld,
     GlobalNavigationBar,
-    DarkmodeToggle
+    DarkmodeToggle,
+    HomeView
   },
   setup() {
+    const isDarkmode = ref(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
     const darkmodeHandler = (isOn:boolean):void => {
       if(isOn) {
-        document.documentElement.setAttribute('color-mode','dark');
+        isDarkmode.value = true;
       }
       else {
-        document.documentElement.setAttribute('color-mode','light');
+        isDarkmode.value = false;
       }
     }
-    const isOsDarkmode:boolean = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    watch(isDarkmode,(newVal)=>{
+      document.documentElement.setAttribute('color-mode',newVal?'dark':'light');
+    })
     return {
       anchor,
       darkmodeHandler,
-      isOsDarkmode
+      isDarkmode
     }
   }
 });
@@ -56,7 +59,8 @@ export default defineComponent({
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   background:var(--background);
-  color:(--on-background);
+  color:var(--text-color);
+  transition:0.3s;
 }
 body {
   margin:0;
@@ -68,9 +72,12 @@ body {
     height:5rem;
     display:flex;
     justify-content: center;
+    z-index:100;
   }
   main {
-    padding-top:100px;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
   }
 }
 .darkmode-toggle{
