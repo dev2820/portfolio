@@ -2,17 +2,19 @@
   <section id="home">
     <img class="cloud small" src="@/assets/myCloud.png"/>
     <img class="cloud big" src="@/assets/myCloud.png"/>
-    <img class="sun big" :class="{appear:!isDarkmode}" src="@/assets/mySun.png"/>
-    <img class="moon big" :class="{appear:isDarkmode}" src="@/assets/myMoon.png"/>
+    <img class="sun big" :class="{appear:!isDarkmodeRef}" src="@/assets/mySun.png"/>
+    <img class="moon big" :class="{appear:isDarkmodeRef}" src="@/assets/myMoon.png"/>
     <img class="character" src="@/assets/myCharacter.png"/>
     <p class="greeting">{{greeting}}</p>
     <p class="job"><font>{{position}}</font> {{job}}</p>
     <p class="name"><font>{{name}}</font> {{iam}}</p>
+    <ArrowButton class="go-next" :direction="'bottom'" :isDarkmode="isDarkmodeRef" @click="goNextHandler"/>
   </section>
 </template>
 
 <script lang="ts">
-import { defineComponent,ref,toRef,watch,onMounted } from "vue";
+import ArrowButton from "@/components/Button/ArrowButton.vue";
+import { defineComponent,ref,toRef, } from "vue";
 export default defineComponent({
   name: "BannerView",
   props: {
@@ -21,16 +23,21 @@ export default defineComponent({
       default: false,
     }
   },
-  components: {},
+  components: {ArrowButton},
   setup(props) {
-    const isDarkmodeRef = toRef(props,'isDarkmode');
-
+    const goNextHandler = () => {
+      const url = window.location.href;
+      window.location.href = "#about";
+      window.history.replaceState(null,'',url);
+    }
+    const isDarkmodeRef = toRef(props,'isDarkmode')
     return {
       greeting:"안녕하세요",
       position:"FE",
       job:"개발자",
       name: "테라",
       iam:"입니다",
+      goNextHandler,
       isDarkmodeRef
     };
   },
@@ -116,13 +123,21 @@ export default defineComponent({
       }
     }
   }
+  .go-next {
+    position:absolute;
+    bottom:9rem;
+    width:9rem;
+    height:9rem;
+    left:50%;
+    margin-left:-4.5rem;
+  }
 }
 @keyframes flow-right {
   0% {
-    transform:translate(0px);
+    transform:translate(0rem);
   }
     50% {
-    transform:translate(100px);
+    transform:translate(6.25rem);
   }
   100% {
     transform:translate(0px);
@@ -133,7 +148,7 @@ export default defineComponent({
     transform:translate(0px);
   }
   50% {
-    transform:translate(-100px);
+    transform:translate(-6.25rem);
   }
   100% {
     transform:translate(0px);
@@ -141,13 +156,13 @@ export default defineComponent({
 }
 @keyframes floating {    
   0% {
-    transform:rotate(10deg) translateY(0px);
+    transform:rotate(12deg) translateY(0px);
   }
   50% {
-    transform:rotate(10deg) translateY(-5px);
+    transform:rotate(12deg) translateY(-0.25rem);
   }
   100% {
-    transform:rotate(10deg) translateY(0px);
+    transform:rotate(12deg) translateY(0px);
   }
 }
 </style>
