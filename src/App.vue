@@ -1,12 +1,13 @@
 <template id="app">
   <span class="darkmode-toggle">
-    <darkmode-toggle class="darkmode-toggle" :checked="isDarkmode" @on="darkmodeHandler(true)" @off="darkmodeHandler(false)"/>
+    <darkmode-toggle class="darkmode-toggle" :checked="isDarkmodeRef" @on="darkmodeHandler(true)" @off="darkmodeHandler(false)"/>
   </span>
   <header>
     <global-navigation-bar :anchors="anchor"/>
   </header>
   <main>
-    <HomeView :isDarkmode="isDarkmode"></HomeView>
+    <HomeView :isDarkmode="isDarkmodeRef"></HomeView>
+    <AboutView/>
   </main>
 </template>
 
@@ -17,30 +18,32 @@ import HelloWorld from "@/components/HelloWorld.vue";
 import GlobalNavigationBar from "./components/GlobalNavigationBar/GlobalNavigationBar.vue";
 import DarkmodeToggle from "./components/Toggle/DarkmodeToggle.vue";
 import HomeView from "./views/HomeView.vue";
+import AboutView from "./views/AboutView.vue";
 export default defineComponent({
   components: {
     HelloWorld,
     GlobalNavigationBar,
     DarkmodeToggle,
-    HomeView
+    HomeView,
+    AboutView
   },
   setup() {
-    const isDarkmode = ref(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    const isDarkmodeRef = ref(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)
     const darkmodeHandler = (isOn:boolean):void => {
       if(isOn) {
-        isDarkmode.value = true;
+        isDarkmodeRef.value = true;
       }
       else {
-        isDarkmode.value = false;
+        isDarkmodeRef.value = false;
       }
     }
-    watch(isDarkmode,(newVal)=>{
+    watch(isDarkmodeRef,(newVal)=>{
       document.documentElement.setAttribute('color-mode',newVal?'dark':'light');
     })
     return {
       anchor,
       darkmodeHandler,
-      isDarkmode
+      isDarkmodeRef
     }
   }
 });
@@ -51,7 +54,9 @@ export default defineComponent({
 @import url("@/assets/css/font.css");
 @import url("@/assets/css/icon.css");
 @import url("@/assets/css/effect.css");
-
+html {
+  scroll-behavior: smooth;
+}
 #app {
   font-family: "Nanum Gothic", "Noto Sans KR", Times, Times New Roman, Georgia,
     serif;
