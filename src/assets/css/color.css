@@ -13,6 +13,7 @@
   --on-light: #ffbe00;
   --glass-background: rgba(255, 255, 255, 0.25);
 }
+:root,
 :root[color-mode="light"] {
   --primary-50: #e3f4f9;
   --primary-100: #b8e4f0;
@@ -29,7 +30,9 @@
   --background: #f4f9f9;
   --on-background: #121212;
   --on-primary: #121212;
-  --text-color: #121212;
+  --primary-text: #121212;
+  --regular-text: #303133;
+  --secondary-text: #606266;
 }
 :root[color-mode="dark"] {
   --primary-50: #fff8df;
@@ -47,5 +50,7 @@
   --background: #222222;
   --on-background: #fefefe;
   --on-primary: #121212;
-  --text-color: #fefefe;
+  --primary-text: #fefefe;
+  --regular-text: #e9e9e9;
+  --secondary-text: #c0c4cc;
 }
