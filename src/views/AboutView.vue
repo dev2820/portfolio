@@ -1,16 +1,20 @@
 <template>
   <section id="about">
-    <div class="introduce">
-      <strong>{{firstLine}}</strong>
-      {{message}}
-    </div>
-    <ProfileCard class="profile-image" :profile="profileImg"/>
+    <TextTitle icon="user-circle">About me</TextTitle>
+    <article class="content">
+      <div class="introduce">
+        <strong>{{firstLine}}</strong>
+        {{message}}
+      </div>
+      <ProfileCard class="profile-image" :profile="profileImg"/>
+    </article>
   </section>
 </template>
 
 <script lang="ts">
 import ArrowButton from "@/components/Button/ArrowButton.vue";
 import ProfileCard from "@/components/Profile/ProfileCard.vue";
+import TextTitle from "@/components/Text/TextTitle.vue";
 import { defineComponent,ref,toRef, } from "vue";
 import {introduce, profileImg, firstLine } from "@/assets/meta.json"
 export default defineComponent({
@@ -21,7 +25,7 @@ export default defineComponent({
       default: false,
     }
   },
-  components: {ArrowButton,ProfileCard},
+  components: {ArrowButton,ProfileCard,TextTitle},
   setup(props) {
     const goNextHandler = () => {
       window.location.href = "#about"
@@ -39,23 +43,32 @@ export default defineComponent({
 </script>
 <style lang="scss" scoped>
 #about {
-  position:relative;
+  padding:80px 0;
   height:1024px;
   width:1000px;
-  display:flex;
-  flex-direction:row;
-  justify-content: space-between;
-  & > * {
-    margin:auto 0;
-  };
-  div.introduce {
-    width:400px;
-    height:500px;
-    font-size:var(--xl);
-  }
-  .profile-image {
+  .content {
     position:relative;
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    & > * {
+      margin:auto 0;
+    };
+    div.introduce {
+      width:440px;
+      font-size:var(--xl);
+      color:var(--secondary-text);
+      line-height:1.625rem;
+      strong {
+        color:var(--regular-text);
+        font-size:var(--2xl);
+      }
+    }
+    .profile-image {
+      position:relative;
+    }
   }
 }
+
 </style>
 
