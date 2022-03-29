@@ -64,7 +64,7 @@ html {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   background:var(--background);
-  color:var(--text-color);
+  color:var(--regular-text);
   transition:0.3s;
 }
 body {
@@ -90,6 +90,7 @@ body {
   right:1rem;
   bottom:1rem;
   margin-top:2rem;
+  z-index:100;
 }
 
 
