@@ -2,9 +2,9 @@
   <div class="title">
     <span class="square">
     </span>
-    <h3>
+    <h2>
       <slot/>
-    </h3>
+    </h2>
   </div>
 </template>
 
@@ -48,10 +48,10 @@ export default defineComponent({
     height:64px;
     background:var(--primary-500);
   }
-  h3 {
+  h2 {
     margin:0;
     margin-left:24px;
-    font-size: var(--6xl);
+    font-size: var(--5xl);
     display:inline-block;
   }
 }
