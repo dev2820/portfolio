@@ -3,3 +3,49 @@
 icon 같은 경우 이와 같은 형식으로 이미지 위치 조절을 통해 이미지를 사용한다.
 .icon_rotate{...width:15px;height:15px;background-position:-23px -50px;}
 */
+.vue,
+.tailwind-css,
+.nodejs,
+.docker,
+.ubuntu,
+.typescript,
+.github,
+.figma,
+.nuxt,
+.storybook,
+.jenkins,
+.cplusplus,
+.javascript,
+.express,
+.jest,
+.mariadb,
+.vscode,
+.sass,
+.git,
+.flutter {
+    background: url("@/assets/png/iconSprite.png") no-repeat;
+}
+
+.vue {width:5rem;height:5rem;background-position:0px 0px; }
+.tailwind-css {width:5rem;height:5rem;background-position:-80px 0px;}
+.express {width:5rem;height:5rem;background-position:calc(-80*2px) 0px; }
+.docker {width:5rem;height:5rem;background-position:calc(-80*3px) 0px; }
+.ubuntu {width:5rem;height:5rem;background-position:calc(-80*4px) 0px; }
+
+.typescript {width:5rem;height:5rem;background-position:0px -80px; }
+.github {width:5rem;height:5rem;background-position:calc(-80*1px) -80px; }
+.figma {width:5rem;height:5rem;background-position:calc(-80*2px) -80px; }
+.nuxt {width:5rem;height:5rem;background-position:calc(-80*3px) -80px; }
+.storybook {width:5rem;height:5rem;background-position:calc(-80*4px) -80px; }
+
+.jenkins {width:5rem;height:5rem;background-position:0px calc(-80*2px); }
+.cplusplus {width:5rem;height:5rem;background-position:calc(-80*1px) calc(-80*2px); }
+.javascript {width:5rem;height:5rem;background-position:calc(-80*2px) calc(-80*2px); }
+.express {width:5rem;height:5rem;background-position:calc(-80*3px) calc(-80*2px); }
+.jest {width:5rem;height:5rem;background-position:calc(-80*4px) calc(-80*2px); }
+
+.mariadb {width:5rem;height:5rem;background-position:0px calc(-80*3px); }
+.vscode {width:5rem;height:5rem;background-position:calc(-80*1px) calc(-80*3px); }
+.sass {width:5rem;height:5rem;background-position:calc(-80*2px) calc(-80*3px); }
+.git {width:5rem;height:5rem;background-position:calc(-80*3px) calc(-80*3px); }
+.flutter {width:5rem;height:5rem;background-position:calc(-80*4px) calc(-80*3px); }
