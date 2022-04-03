@@ -8,6 +8,7 @@
   <main>
     <HomeView :isDarkmode="isDarkmodeRef"></HomeView>
     <AboutView/>
+    <SkillsAndToolsView/>
   </main>
 </template>
 
@@ -18,12 +19,14 @@ import GlobalNavigationBar from "./components/GlobalNavigationBar/GlobalNavigati
 import DarkmodeToggle from "./components/Toggle/DarkmodeToggle.vue";
 import HomeView from "./views/HomeView.vue";
 import AboutView from "./views/AboutView.vue";
+import SkillsAndToolsView from "./views/SkillsAndToolsView.vue";
 export default defineComponent({
   components: {
     GlobalNavigationBar,
     DarkmodeToggle,
     HomeView,
-    AboutView
+    AboutView,
+    SkillsAndToolsView
   },
   setup() {
     const isDarkmodeRef = ref(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)
@@ -76,6 +79,11 @@ body {
     display:flex;
     justify-content: center;
     z-index:100;
+    transition:0.3s;
+    backdrop-filter:var(--glass-drop-shadow);
+    &:hover {
+      background:var(--glass-background-variant);
+    }
   }
   main {
     display:flex;

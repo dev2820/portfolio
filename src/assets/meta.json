@@ -10,7 +10,7 @@
         },
         {
             "title":"Skill",
-            "link":"#skill"
+            "link":"#skill-and-tools"
         },
         {
             "title":"Career",
@@ -27,5 +27,80 @@
     ],
     "introduce":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
     "profileImg":"/src/assets/dummy_profile.png",
-    "firstLine":"Hi, My name is Terra. I’m a Web Developer."
+    "firstLine":"Hi, My name is Terra. I’m a Web Developer.",
+
+    "skillsAndTools": {
+        "web FE": [
+            {
+                "icon":"vue",
+                "link":""
+            },
+            {
+                "icon":"tailwind-css",
+                "link":""
+            },
+            {
+                "icon":"storybook",
+                "link":""
+            }
+        ],
+        "Back End": [
+            {
+                "icon":"express",
+                "link":""
+            },
+            {
+                "icon":"docker",
+                "link":""
+            },
+            {
+                "icon":"nodejs",
+                "link":""
+            },
+            {
+                "icon":"mariadb",
+                "link":""
+            }
+        ],
+        "Language": [
+            {
+                "icon":"javascript",
+                "link":""
+            },
+            {
+                "icon":"typescript",
+                "link":""
+            },
+            {
+                "icon":"cplusplus",
+                "link":""
+            }
+        ],
+        "DevOps": [
+            {
+                "icon":"git",
+                "link":""
+            },
+            {
+                "icon":"github",
+                "link":""
+            }
+        ],
+        "App": [
+            {
+                "icon":"flutter",
+                "link":""
+            }
+        ],
+        "Others": [
+            {
+                "icon":"figma",
+                "link":""
+            },
+            {
+                "icon":"vscode",
+                "link":""
+            }
+        ]
+    }
 }
