@@ -14,14 +14,12 @@
 <script lang="ts">
 import { defineComponent,ref,watch } from "vue";
 import { anchor } from "@/assets/meta.json"
-import HelloWorld from "@/components/HelloWorld.vue";
 import GlobalNavigationBar from "./components/GlobalNavigationBar/GlobalNavigationBar.vue";
 import DarkmodeToggle from "./components/Toggle/DarkmodeToggle.vue";
 import HomeView from "./views/HomeView.vue";
 import AboutView from "./views/AboutView.vue";
 export default defineComponent({
   components: {
-    HelloWorld,
     GlobalNavigationBar,
     DarkmodeToggle,
     HomeView,
