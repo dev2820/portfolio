@@ -40,7 +40,7 @@ export default defineComponent({
     }
     watch(isDarkmodeRef,(newVal)=>{
       document.documentElement.setAttribute('color-mode',newVal?'dark':'light');
-    })
+    });
     return {
       anchor,
       darkmodeHandler,
@@ -57,6 +57,8 @@ export default defineComponent({
 @import url("@/assets/css/effect.css");
 html {
   scroll-behavior: smooth;
+  width:100%;
+  background:var(--background);
 }
 #app {
   font-family: "Nanum Gothic", "Noto Sans KR", Times, Times New Roman, Georgia,
@@ -69,11 +71,12 @@ html {
   transition:0.3s;
 }
 body {
+  width:100%;
   margin:0;
-  padding:0;
   header {
     background:var(--glass-background);
     position:fixed;
+    top:0;
     width:100%;
     height:5rem;
     display:flex;
