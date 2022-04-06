@@ -38,7 +38,8 @@ export default defineComponent({
 <style lang="scss" scoped>
 #skills-and-tools {
   position:relative;
-  height:1024px;
+  padding-top:80px;
+  height:calc(1024px - 80px);
   width:1000px;
   
 }

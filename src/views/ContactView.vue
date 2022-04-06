@@ -1,0 +1,79 @@
+<template>
+  <section id="contact">
+    <TextTitle>Contact</TextTitle>
+    <div class="row">
+      <CloudCard 
+        :title="contact.address.title" 
+        :subtitle="contact.address.subtitle" 
+        :link="contact.address.link"
+        :img="mappin3dIcon"
+      ></CloudCard>
+      <CloudCard 
+        :title="contact.blog.title" 
+        :subtitle="contact.blog.subtitle" 
+        :link="contact.blog.link"
+        :img="pencil3dIcon"
+      ></CloudCard>
+      <CloudCard 
+        :title="contact.email.title" 
+        :subtitle="contact.email.subtitle" 
+        :link="contact.email.link"
+        :img="email3dIcon"
+      ></CloudCard>
+      <CloudCard 
+        :title="contact.github.title" 
+        :subtitle="contact.github.subtitle" 
+        :link="contact.github.link"
+        :img="github3dIcon"
+      ></CloudCard>
+    </div>
+  </section>
+</template>
+
+<script lang="ts">
+import ArrowButton from "@/components/Button/ArrowButton.vue";
+import TextTitle from "@/components/Text/TextTitle.vue";
+import CloudCard from "@/components/Card/CloudCard.vue"
+
+import mappin3dIcon from "@/assets/png/mappin3dIcon.png";
+import pencil3dIcon from "@/assets/png/pencil3dIcon.png";
+import email3dIcon from "@/assets/png/email3dIcon.png";
+import github3dIcon from "@/assets/png/github3dIcon.png";
+import { contact } from "@/assets/meta.json"
+import { defineComponent,ref,toRef, } from "vue";
+import { skillsAndTools } from "@/assets/meta.json";
+export default defineComponent({
+  name: "SkillsAndToolsView",
+  props: {
+    isDarkmode: {
+      type: Boolean,
+      default: false,
+    }
+  },
+  components: {ArrowButton,TextTitle,CloudCard},
+  setup(props) {
+    return {
+      email3dIcon,
+      pencil3dIcon,
+      mappin3dIcon,
+      github3dIcon,
+      skillsAndTools,
+      contact,
+    }
+  },
+});
+</script>
+<style lang="scss" scoped>
+#contact {
+  position:relative;
+  padding-top:80px;
+  height:calc(1024px - 80px);
+  width:1000px;
+  div.row {
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+  }
+}
+</style>
+

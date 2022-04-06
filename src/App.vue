@@ -9,6 +9,7 @@
     <HomeView :isDarkmode="isDarkmodeRef"></HomeView>
     <AboutView/>
     <SkillsAndToolsView/>
+    <ContactView/>
   </main>
 </template>
 
@@ -20,13 +21,15 @@ import DarkmodeToggle from "./components/Toggle/DarkmodeToggle.vue";
 import HomeView from "./views/HomeView.vue";
 import AboutView from "./views/AboutView.vue";
 import SkillsAndToolsView from "./views/SkillsAndToolsView.vue";
+import ContactView from "./views/ContactView.vue";
 export default defineComponent({
   components: {
     GlobalNavigationBar,
     DarkmodeToggle,
     HomeView,
     AboutView,
-    SkillsAndToolsView
+    SkillsAndToolsView,
+    ContactView
   },
   setup() {
     const isDarkmodeRef = ref(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)

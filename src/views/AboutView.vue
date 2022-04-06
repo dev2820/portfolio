@@ -44,7 +44,7 @@ export default defineComponent({
 <style lang="scss" scoped>
 #about {
   padding:80px 0;
-  height:1024px;
+  height:100%;
   width:1000px;
   .content {
     position:relative;

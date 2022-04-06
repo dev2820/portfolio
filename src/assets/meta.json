@@ -102,5 +102,27 @@
                 "link":""
             }
         ]
+    },
+    "contact": {
+        "address": {
+            "title":"Address",
+            "subtitle":"Seoul in Korea",
+            "link":"https://goo.gl/maps/Gz7rsBFS1dEWN7TS9"
+        },
+        "blog": {
+            "title":"Blog",
+            "subtitle":"velog",
+            "link":"https://velog.io/@dev2820"
+        },
+        "email": {
+            "title":"Email",
+            "subtitle":"second28200@gmail.com",
+            "link":"mailto:second28200@gmail.com"
+        },
+        "github": {
+            "title":"Github",
+            "subtitle":"dev2820",
+            "link":"https://github.com/dev2820"
+        }
     }
 }
