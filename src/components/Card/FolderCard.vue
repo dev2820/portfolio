@@ -39,7 +39,7 @@ export default defineComponent({
   .app-grid {
     display:grid;
     grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat(2,1fr);
+    grid-template-rows: repeat(2,6.5rem);
     align-items:center;
     justify-items:center;
     justify-content:space-between;
@@ -51,6 +51,5 @@ export default defineComponent({
 }
 .card {
   width:268px;
-  height:180px;
 }
 </style>
