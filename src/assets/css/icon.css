@@ -28,7 +28,7 @@ icon 같은 경우 이와 같은 형식으로 이미지 위치 조절을 통해 
 
 .vue {width:5rem;height:5rem;background-position:0px 0px; }
 .tailwind-css {width:5rem;height:5rem;background-position:-80px 0px;}
-.express {width:5rem;height:5rem;background-position:calc(-80*2px) 0px; }
+.nodejs {width:5rem;height:5rem;background-position:calc(-80*2px) 0px; }
 .docker {width:5rem;height:5rem;background-position:calc(-80*3px) 0px; }
 .ubuntu {width:5rem;height:5rem;background-position:calc(-80*4px) 0px; }
 

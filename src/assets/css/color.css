@@ -24,7 +24,7 @@
   --primary-700: #0089c2;
   --primary-800: #0078af;
   --primary-900: #005990;
-  --card-background: #ffffff;
+  --surface: #ffffff;
   --button-background: #ffffff;
   --background: #f4f9f9;
   --on-background: #121212;
@@ -47,7 +47,7 @@
   --primary-700: #ff9c00;
   --primary-800: #ff8a00;
   --primary-900: #ff6800;
-  --card-background: #222831;
+  --surface: #222831;
   --button-background: #222831;
   --background: #222222;
   --on-background: #fefefe;

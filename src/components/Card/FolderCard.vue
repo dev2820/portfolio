@@ -2,7 +2,9 @@
   <div class="folder">
     <h3 class="folder-title">{{title}}</h3>
     <TranslucentCard class="card app-grid">
-      <a v-for="item in items" :key="item" :href="item.link" target="_blank" class="app-shape" :class="item.icon"></a>
+      <a v-for="item in items" :key="item" :href="item.link" target="_blank" class="app-shape" :class="item.icon">
+      </a>
+      
     </TranslucentCard>
   </div>
 </template>
@@ -20,7 +22,7 @@ export default defineComponent({
     items: {
       type: Array as () => Array<Item>
     }
-  },
+  }
 });
 </script>
 
@@ -28,7 +30,8 @@ export default defineComponent({
 .card {
   border-radius: 1rem;
   background:var(--glass-background);
-  padding:1.5rem
+  padding:1.5rem;
+  width:268px;
 }
 .folder {
   h3.folder-title {
@@ -44,12 +47,24 @@ export default defineComponent({
     justify-items:center;
     justify-content:space-between;
     a.app-shape {
+      text-decoration: none;
+      color: var(--on-surface);
+      transition:0.3s;
       border-radius:1rem;
       box-shadow:var(--card-box-shadow);
     }
+    a.app-shape:hover {
+      transform:translateY(-4px);
+      box-shadow:var(--card-box-shadow-16dp);
+      .caption {
+        visibility: visible;
+      }
+    }
   }
 }
-.card {
-  width:268px;
+span.tooltip {
+  padding:8px 12px;
+  border-radius:1rem;
+
 }
 </style>
