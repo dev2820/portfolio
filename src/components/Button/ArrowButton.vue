@@ -12,13 +12,13 @@ type directionType = 'top'|'botton'|'right'|'left'
 export default defineComponent({
   name: "ArrowButton",
   props: {
-    direction:{
+    "direction":{
       type:String as () => directionType,
       default() {
         return 'top';
       }
     },
-    isDarkmode: {
+    "isDarkmode": {
       type:Boolean,
       default() {
         return false;

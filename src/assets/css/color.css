@@ -24,8 +24,8 @@
   --primary-700: #0089c2;
   --primary-800: #0078af;
   --primary-900: #005990;
-  --surface: #ffffff;
-  --button-background: #ffffff;
+  --surface: #fefefe;
+  --button-background: #fefefe;
   --background: #f4f9f9;
   --on-background: #121212;
   --on-surface: #121212;
@@ -51,6 +51,7 @@
   --button-background: #222831;
   --background: #222222;
   --on-background: #fefefe;
+  --on-surface: #fefefe;
   --on-primary: #121212;
   --primary-text: #fefefe;
   --regular-text: #e9e9e9;

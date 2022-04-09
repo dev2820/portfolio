@@ -70,6 +70,7 @@ export default defineComponent({
   height:calc(1024px - 80px);
   width:1000px;
   div.row {
+    margin-top:200px;
     display:flex;
     flex-direction:row;
     justify-content: space-between;

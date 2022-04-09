@@ -56,16 +56,21 @@ a {
       }
     }
     strong {
+      
+      transition:0.3s;
       font-size:var(--2xl);
       margin-bottom:1rem;
     }
     small {
+      
+      transition:0.3s;
       font-size:var(--base);
       margin-bottom:2rem;
     }
   }
 }
 .card:hover {
+  
   strong,small {
     color:var(--primary-500);
   }

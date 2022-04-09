@@ -24,14 +24,20 @@ export default defineComponent({
 <style scoped lang="scss">
 button {
   border: none;
-  padding: 0.5rem 2rem;
+  padding: 0.7rem 2rem;
   border-radius: 0.75rem;
+  font-weight:bold;
+  font-size:1rem;
   background-color: var(--button-background);
   filter: var(--drop-shadow);
   box-shadow: var(--button-inner-shadow);
   cursor: pointer;
 
   &.primary {
+    background: var(--primary-linear-gradient);
+    box-shadow: var(--primary-inner-shadow);
+  }
+  &:hover {
     background: var(--primary-linear-gradient);
     box-shadow: var(--primary-inner-shadow);
   }

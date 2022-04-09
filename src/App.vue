@@ -9,6 +9,7 @@
     <HomeView :isDarkmode="isDarkmodeRef"></HomeView>
     <AboutView/>
     <SkillsAndToolsView/>
+    <ProjectsView/>
     <ContactView/>
   </main>
 </template>
@@ -21,6 +22,7 @@ import DarkmodeToggle from "./components/Toggle/DarkmodeToggle.vue";
 import HomeView from "./views/HomeView.vue";
 import AboutView from "./views/AboutView.vue";
 import SkillsAndToolsView from "./views/SkillsAndToolsView.vue";
+import ProjectsView from "./views/ProjectsView.vue";
 import ContactView from "./views/ContactView.vue";
 export default defineComponent({
   components: {
@@ -29,6 +31,7 @@ export default defineComponent({
     HomeView,
     AboutView,
     SkillsAndToolsView,
+    ProjectsView,
     ContactView
   },
   setup() {
@@ -104,6 +107,9 @@ body {
   margin-top:2rem;
   z-index:100;
 }
-
+a {
+  text-decoration: none;
+  color: var(--onSurface);
+}
 
 </style>
