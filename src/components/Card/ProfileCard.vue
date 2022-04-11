@@ -1,7 +1,9 @@
 <template>
   <div class="profile">
     <div class="background"></div>
-    <img @error="noImage($event)" :src="profile"/>
+    <div class="profile-image" data-aos="flip-right" data-aos-duration="500">
+      <img @error="noImage($event)" :src="profile"/>
+    </div>
   </div>
 </template>
 
@@ -39,14 +41,6 @@ div.profile {
     position:absolute;
     border-radius: 1rem;
   }
-  img {
-    left:0;
-    top:0;
-    width:400px;
-    height:500px;
-    filter:sepia(60%);
-    box-shadow:var(--card-box-shadow);
-  }
   div.background {
     width:400px;
     height:500px;
@@ -54,6 +48,19 @@ div.profile {
     top:48px;
     background:var(--primary-500);
   }
-
+  div.profile-image {
+    width:400px;
+    height:500px;
+    left:0;
+    top:0;
+    box-shadow:var(--card-box-shadow);
+    display:flex;
+    justify-content: center;
+    overflow:hidden;
+    img {
+      filter:sepia(60%);
+      text-align: center;
+    }
+  }
 }
 </style>

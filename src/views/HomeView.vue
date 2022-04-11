@@ -8,13 +8,14 @@
     <p class="greeting">{{greeting}}</p>
     <p class="job"><font>{{position}}</font> {{job}}</p>
     <p class="name"><font>{{name}}</font> {{iam}}</p>
-    <ArrowButton class="go-next" :direction="'bottom'" :isDarkmode="isDarkmodeRef" @click="goNextHandler"/>
+    <ArrowButton class="go-next" :direction="'bottom'" :guideMessage="'Go Next'" :isDarkmode="isDarkmodeRef" @click="goNextHandler"/>
   </section>
 </template>
 
 <script lang="ts">
 import ArrowButton from "@/components/Button/ArrowButton.vue";
 import { defineComponent,ref,toRef, } from "vue";
+import { home } from "@/assets/meta.json"
 export default defineComponent({
   name: "BannerView",
   props: {
@@ -33,9 +34,9 @@ export default defineComponent({
     const isDarkmodeRef = toRef(props,'isDarkmode')
     return {
       greeting:"안녕하세요",
-      position:"FE",
-      job:"개발자",
-      name: "테라",
+      position:home.position,
+      job:home.job,
+      name: home.name,
       iam:"입니다",
       goNextHandler,
       isDarkmodeRef

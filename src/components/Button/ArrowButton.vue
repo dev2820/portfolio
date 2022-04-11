@@ -1,7 +1,11 @@
 <template>
   <button>
     <img :style="directStyle" :src="arrowSrc" />
+    <div class="guide-message" :class="{'guide-exist':guideMessage.length>0}">
+      {{guideMessage}}
+    </div>
   </button>
+
 </template>
 
 <script lang="ts">
@@ -23,13 +27,18 @@ export default defineComponent({
       default() {
         return false;
       }
+    },
+    "guideMessage": {
+      type: String,
+      default() {
+        return "";
+      }
     }
   },
   setup(props) {
     props = reactive(props);
     const directionRef = toRef(props, "direction");
     const isDarkmodeRef = toRef(props,'isDarkmode');
-
     const directStyle = computed(()=>{
       let degree = 0;
       if(directionRef.value === 'top') degree = 0;
@@ -51,7 +60,7 @@ export default defineComponent({
     })
     return {
       directStyle,
-      arrowSrc
+      arrowSrc,
     }
   },
 });
@@ -71,5 +80,35 @@ button {
     width:72px;
     height:72px;
   }
+  .guide-message {
+    visibility:hidden;
+    opacity:0;
+    position:absolute;
+    height: 1.25rem;
+    right:-7rem;
+    top:50%;
+    margin-top:-1rem;
+    text-align:center;
+    line-height:1.25rem;
+    background:var(--primary-500);
+    color:var(--on-primary);
+    padding:0.5rem 1rem;
+    border-radius:0.5rem;
+    transition:0.3s;
+    &:before {
+      content:'◀';
+      color: var(--primary-500);
+      position:absolute;
+      font-size:2rem;
+      left:-0.9rem;
+    }
+  }
+  &:hover {
+    .guide-message.guide-exist {
+      visibility: visible;
+      opacity:1;
+    }
+  }
 }
+
 </style>

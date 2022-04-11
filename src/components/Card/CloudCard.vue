@@ -51,7 +51,6 @@ a {
       margin-bottom:3.25rem;
       img {
         width:200px;
-        height:200px;
         margin:auto 0;
       }
     }

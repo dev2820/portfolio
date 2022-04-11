@@ -12,11 +12,20 @@
     <ProjectsView/>
     <ContactView/>
   </main>
+  <footer>
+    <ArrowButton class="go-top" :direction="'top'" :isDarkmode="isDarkmodeRef" :guideMessage="'Go Top'" @click="goTopHandler"/>
+    <p>ⓒ 2022 <strong>dev2820</strong> All rights reserved. </p><br/><br/>
+    <cite class="source">
+      [일러스트 출처]<br/><br/>
+      <a href="https://www.figma.com/community/file/890095002328610853/SALY---3D-Illustration-Pack">https://www.figma.com/community/file/890095002328610853/SALY---3D-Illustration-Pack</a><br/>
+      <a href="https://www.figma.com/community/file/1030350068466019692/3dicons---Open-source-3D-icon-library">https://www.figma.com/community/file/1030350068466019692/3dicons---Open-source-3D-icon-library</a><br/>
+    </cite>
+  </footer>
 </template>
 
 <script lang="ts">
 import { defineComponent,ref,watch } from "vue";
-import { anchor } from "@/assets/meta.json"
+import { anchor,contact } from "@/assets/meta.json"
 import GlobalNavigationBar from "./components/GlobalNavigationBar/GlobalNavigationBar.vue";
 import DarkmodeToggle from "./components/Toggle/DarkmodeToggle.vue";
 import HomeView from "./views/HomeView.vue";
@@ -24,6 +33,8 @@ import AboutView from "./views/AboutView.vue";
 import SkillsAndToolsView from "./views/SkillsAndToolsView.vue";
 import ProjectsView from "./views/ProjectsView.vue";
 import ContactView from "./views/ContactView.vue";
+
+import ArrowButton from "@/components/Button/ArrowButton.vue";
 export default defineComponent({
   components: {
     GlobalNavigationBar,
@@ -32,9 +43,14 @@ export default defineComponent({
     AboutView,
     SkillsAndToolsView,
     ProjectsView,
-    ContactView
+    ContactView,
+    ArrowButton
   },
   setup() {
+    const goTopHandler = () => {
+      document.body.scrollTop = 0; // For Safari
+      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
     const isDarkmodeRef = ref(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)
     const darkmodeHandler = (isOn:boolean):void => {
       if(isOn) {
@@ -49,7 +65,9 @@ export default defineComponent({
     });
     return {
       anchor,
+      contact,
       darkmodeHandler,
+      goTopHandler,
       isDarkmodeRef
     }
   }
@@ -74,6 +92,11 @@ html {
   text-align: center;
   background:var(--background);
   color:var(--regular-text);
+  word-break: break-word;
+  *::selection {
+    background:var(--primary-500);
+    color: var(--on-primary);
+  }
   transition:0.3s;
 }
 body {
@@ -98,6 +121,22 @@ body {
     display:flex;
     flex-direction:column;
     align-items: center;
+  }
+  footer {
+    height:500px;
+    width:100%;
+    padding:1rem 0;
+    background:var(--ground);
+    border-top:1rem solid var(--grass);
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .go-top {
+      width:9rem;
+      height:9rem;
+      margin:2rem auto;
+    }
   }
 }
 .darkmode-toggle{

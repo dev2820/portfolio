@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <link rel="icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <title>웹 개발자 양기조</title>
   </head>
   <body>
     <div id="app"></div>
@@ -16,6 +18,7 @@
       else {
         document.documentElement.setAttribute('color-mode', 'light');
       }
+      AOS.init();
     </script>
   </body>
 </html>

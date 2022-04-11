@@ -2,7 +2,12 @@
   <div class="folder">
     <h3 class="folder-title">{{title}}</h3>
     <TranslucentCard class="card app-grid">
-      <a v-for="item in items" :key="item" :href="item.link" target="_blank" class="app-shape" :class="item.icon">
+      <a v-for="item in items" :key="item" 
+        :href="item.link" 
+        target="_blank" 
+        class="app-shape" 
+        :class="item.icon"
+      >
       </a>
       
     </TranslucentCard>

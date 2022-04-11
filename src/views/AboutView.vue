@@ -2,21 +2,21 @@
   <section id="about">
     <TextTitle icon="user-circle">About me</TextTitle>
     <article class="content">
-      <div class="introduce">
-        <strong>{{firstLine}}</strong>
-        {{message}}
+      <div class="introduce" data-aos="fade-right">
+        <strong>{{about.firstLine}}</strong>
+        {{about.introduce}}
       </div>
-      <ProfileCard class="profile-image" :profile="profileImg"/>
+      <ProfileCard class="profile-image" :profile="about.profileImg"/>
     </article>
   </section>
 </template>
 
 <script lang="ts">
 import ArrowButton from "@/components/Button/ArrowButton.vue";
-import ProfileCard from "@/components/Profile/ProfileCard.vue";
+import ProfileCard from "@/components/Card/ProfileCard.vue";
 import TextTitle from "@/components/Text/TextTitle.vue";
 import { defineComponent,ref,toRef, } from "vue";
-import {introduce, profileImg, firstLine } from "@/assets/meta.json"
+import { about } from "@/assets/meta.json"
 export default defineComponent({
   name: "AboutView",
   props: {
@@ -32,11 +32,9 @@ export default defineComponent({
     }
     const isDarkmodeRef = toRef(props,'isDarkmode')
     return {
-      firstLine:firstLine,
-      message:introduce,
+      about,
       goNextHandler,
       isDarkmodeRef,
-      profileImg
     };
   },
 });
@@ -58,7 +56,7 @@ export default defineComponent({
       width:440px;
       font-size:var(--xl);
       color:var(--secondary-text);
-      line-height:1.625rem;
+      line-height:2rem;
       strong {
         color:var(--regular-text);
         font-size:var(--2xl);

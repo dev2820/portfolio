@@ -11,6 +11,7 @@
   --blueGray-900: #222831;
   --on-dark: #343c48;
   --on-light: #ffbe00;
+  --grass: #95CD41;
 }
 :root,
 :root[color-mode="light"] {
@@ -26,15 +27,16 @@
   --primary-900: #005990;
   --surface: #fefefe;
   --button-background: #fefefe;
-  --background: #f4f9f9;
+  --background: #e4f9f9;
   --on-background: #121212;
   --on-surface: #121212;
-  --on-primary: #121212;
+  --on-primary: #fefefe;
   --primary-text: #121212;
   --regular-text: #303133;
   --secondary-text: #606266;
   --glass-background: rgba(255, 255, 255, 0.25);
   --glass-background-variant: rgba(255, 255, 255, 0.75);
+  --ground: #8E806A;
 }
 :root[color-mode="dark"] {
   --primary-50: #fff8df;
@@ -58,4 +60,5 @@
   --secondary-text: #c0c4cc;
   --glass-background: rgba(0, 0, 0, 0.25);
   --glass-background-variant: rgba(0, 0, 0, 0.75);
+  --ground: #301800;
 }

@@ -2,7 +2,11 @@
   <section id="projects">
     <TextTitle icon="user-circle">Projects</TextTitle>
     <div class="grid">
-      <ProjectCard v-for="project in projects.slice(0,showLength)" :key="project" :project="project"></ProjectCard>
+      <ProjectCard 
+        v-for="project in projects.slice(0,showLength)" :key="project" 
+        :project="project"
+        data-aos="zoom-in-right"
+      ></ProjectCard>
     </div>
     <CommonButton v-show="showLength < projects.length" primary @click="showMore(3)">더보기</CommonButton>
   </section>

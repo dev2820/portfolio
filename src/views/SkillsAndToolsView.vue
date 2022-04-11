@@ -2,12 +2,36 @@
   <section id="skills-and-tools">
     <TextTitle icon="user-circle">Skills & Tools</TextTitle>
     <div class="folder-grid">
-      <FolderCard title="웹 프론트" :items="skillsAndTools['web FE']"></FolderCard>
-      <FolderCard title="앱" :items="skillsAndTools['App']"></FolderCard>
-      <FolderCard title="백엔드" :items="skillsAndTools['Back End']"></FolderCard>
-      <FolderCard title="언어" :items="skillsAndTools['Language']"></FolderCard>
-      <FolderCard title="데브옵스" :items="skillsAndTools['DevOps']"></FolderCard>
-      <FolderCard title="기타" :items="skillsAndTools['Others']"></FolderCard>
+      <FolderCard title="웹 프론트" :items="skillsAndTools['web FE']"
+        data-aos="zoom-in"
+        data-aos-delay="100"
+        data-aos-duration="500"
+      ></FolderCard>
+      <FolderCard title="앱" :items="skillsAndTools['App']"
+        data-aos="zoom-in"
+        data-aos-delay="200"
+        data-aos-duration="500"
+      ></FolderCard>
+      <FolderCard title="백엔드" :items="skillsAndTools['Back End']"
+        data-aos="zoom-in"
+        data-aos-delay="300"
+        data-aos-duration="500"
+      ></FolderCard>
+      <FolderCard title="언어" :items="skillsAndTools['Language']"
+        data-aos="zoom-in"
+        data-aos-delay="100"
+        data-aos-duration="500"
+      ></FolderCard>
+      <FolderCard title="데브옵스" :items="skillsAndTools['DevOps']"
+        data-aos="zoom-in"
+        data-aos-delay="200"
+        data-aos-duration="500"
+      ></FolderCard>
+      <FolderCard title="기타" :items="skillsAndTools['Others']"
+        data-aos="zoom-in"
+        data-aos-delay="300"
+        data-aos-duration="500"
+      ></FolderCard>
     </div>
   </section>
 </template>
