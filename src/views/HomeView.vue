@@ -5,16 +5,16 @@
     <img class="sun big" :class="{appear:!isDarkmodeRef}" src="@/assets/mySun.png"/>
     <img class="moon big" :class="{appear:isDarkmodeRef}" src="@/assets/myMoon.png"/>
     <img class="character" src="@/assets/myCharacter.png"/>
-    <p class="greeting">{{greeting}}</p>
-    <p class="job"><font>{{position}}</font> {{job}}</p>
-    <p class="name"><font>{{name}}</font> {{iam}}</p>
+    <p class="greeting" :class="{'show':showAfter300}">{{greeting}}</p>
+    <p class="job" :class="{'show':showAfter1000}"><font>{{position}}</font> {{job}}</p>
+    <p class="name" :class="{'show':showAfter1700}"><font>{{name}}</font> {{iam}}</p>
     <ArrowButton class="go-next" :direction="'bottom'" :guideMessage="'Go Next'" :isDarkmode="isDarkmodeRef" @click="goNextHandler"/>
   </section>
 </template>
 
 <script lang="ts">
 import ArrowButton from "@/components/Button/ArrowButton.vue";
-import { defineComponent,ref,toRef, } from "vue";
+import { defineComponent,ref,toRef,onMounted, ComponentPublicInstance } from "vue";
 import { home } from "@/assets/meta.json"
 export default defineComponent({
   name: "BannerView",
@@ -31,7 +31,21 @@ export default defineComponent({
       window.location.href = "#about";
       window.history.replaceState(null,'',url);
     }
-    const isDarkmodeRef = toRef(props,'isDarkmode')
+    const isDarkmodeRef = toRef(props,'isDarkmode');
+    const showAfter300 = ref(false);
+    const showAfter1000 = ref(false);
+    const showAfter1700 = ref(false);
+    onMounted(()=>{
+      setTimeout(()=>{
+        showAfter300.value = true;
+      },300)
+      setTimeout(()=>{
+        showAfter1000.value = true;
+      },1000)
+      setTimeout(()=>{
+        showAfter1700.value = true;
+      },1700)
+    })
     return {
       greeting:"안녕하세요",
       position:home.position,
@@ -39,7 +53,10 @@ export default defineComponent({
       name: home.name,
       iam:"입니다",
       goNextHandler,
-      isDarkmodeRef
+      isDarkmodeRef,
+      showAfter300,
+      showAfter1000,
+      showAfter1700
     };
   },
 });
@@ -94,6 +111,8 @@ export default defineComponent({
     text-align:left;
     margin:0;
     z-index:10;
+    opacity:0;
+    transition:1s;
     &.job {
       transform:translateY(calc(var(--6xl)*1.375));
     }
@@ -122,6 +141,9 @@ export default defineComponent({
       &:before {
         width:100%;
       }
+    }
+    &.show {
+      opacity:1;
     }
   }
   .go-next {

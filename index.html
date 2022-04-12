@@ -12,11 +12,17 @@
     <div id="app"></div>
     <script type="module" src="/src/main.ts"></script>
     <script>
-      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.documentElement.setAttribute('color-mode', 'dark');
+      const mode = window.localStorage.getItem('isDarkmode');
+      if(!!mode) { // 저장된 다크모드 여부
+        document.documentElement.setAttribute('color-mode',mode);
       }
-      else {
-        document.documentElement.setAttribute('color-mode', 'light');
+      else { // 저장된 다크모드 여부가 없다면 
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          document.documentElement.setAttribute('color-mode', 'dark');
+        }
+        else {
+          document.documentElement.setAttribute('color-mode', 'light');
+        }
       }
       AOS.init();
     </script>

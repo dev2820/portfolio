@@ -62,6 +62,7 @@ export default defineComponent({
     }
     watch(isDarkmodeRef,(newVal)=>{
       document.documentElement.setAttribute('color-mode',newVal?'dark':'light');
+      localStorage.setItem('isDarkmode', newVal?'dark':'light');
     });
     return {
       anchor,
@@ -89,6 +90,7 @@ html {
     serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-display: swap;
   text-align: center;
   background:var(--background);
   color:var(--regular-text);
