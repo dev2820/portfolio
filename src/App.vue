@@ -13,7 +13,7 @@
     <ContactView/>
   </main>
   <footer>
-    <ArrowButton class="go-top" :direction="'top'" :isDarkmode="isDarkmodeRef" :guideMessage="'Go Top'" @click="goTopHandler"/>
+    <ArrowButton class="go-top" :direction="'top'" :guideMessage="'Go Top'" @click="goTopHandler"/>
     <p>ⓒ 2022 <strong>dev2820</strong> All rights reserved. </p><br/><br/>
     <cite class="source">
       [일러스트 출처]<br/><br/>
@@ -51,7 +51,7 @@ export default defineComponent({
       document.body.scrollTop = 0; // For Safari
       document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
     }
-    const isDarkmodeRef = ref(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)
+    const isDarkmodeRef = ref(document.documentElement.getAttribute('color-mode')==='dark')
     const darkmodeHandler = (isOn:boolean):void => {
       if(isOn) {
         isDarkmodeRef.value = true;

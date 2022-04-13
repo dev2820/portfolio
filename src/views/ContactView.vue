@@ -43,7 +43,6 @@
 </template>
 
 <script lang="ts">
-import ArrowButton from "@/components/Button/ArrowButton.vue";
 import TextTitle from "@/components/Text/TextTitle.vue";
 import CloudCard from "@/components/Card/CloudCard.vue"
 
@@ -62,7 +61,7 @@ export default defineComponent({
       default: false,
     }
   },
-  components: {ArrowButton,TextTitle,CloudCard},
+  components: {TextTitle,CloudCard},
   setup(props) {
     return {
       email3dIcon,

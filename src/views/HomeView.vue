@@ -8,13 +8,13 @@
     <p class="greeting" :class="{'show':showAfter300}">{{greeting}}</p>
     <p class="job" :class="{'show':showAfter1000}"><font>{{position}}</font> {{job}}</p>
     <p class="name" :class="{'show':showAfter1700}"><font>{{name}}</font> {{iam}}</p>
-    <ArrowButton class="go-next" :direction="'bottom'" :guideMessage="'Go Next'" :isDarkmode="isDarkmodeRef" @click="goNextHandler"/>
+    <ArrowButton class="go-next" :direction="'bottom'" :guideMessage="'Go Next'" @click="goNextHandler"/>
   </section>
 </template>
 
 <script lang="ts">
 import ArrowButton from "@/components/Button/ArrowButton.vue";
-import { defineComponent,ref,toRef,onMounted, ComponentPublicInstance } from "vue";
+import { defineComponent,ref,toRef,onMounted } from "vue";
 import { home } from "@/assets/meta.json"
 export default defineComponent({
   name: "BannerView",

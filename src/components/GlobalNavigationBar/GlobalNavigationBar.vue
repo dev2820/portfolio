@@ -1,6 +1,6 @@
 <template>
   <ul>
-    <li v-for="anchor in anchors" :key="anchor">
+    <li v-for="anchor in anchors" :key="anchor.title">
       <a :href="anchor.link">{{anchor.title}}</a>
     </li>
   </ul>

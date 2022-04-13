@@ -6,13 +6,12 @@
         <strong>{{about.firstLine}}</strong>
         {{about.introduce}}
       </div>
-      <ProfileCard class="profile-image" :profile="about.profileImg"/>
+      <ProfileCard class="profile-image"/>
     </article>
   </section>
 </template>
 
 <script lang="ts">
-import ArrowButton from "@/components/Button/ArrowButton.vue";
 import ProfileCard from "@/components/Card/ProfileCard.vue";
 import TextTitle from "@/components/Text/TextTitle.vue";
 import { defineComponent,ref,toRef, } from "vue";
@@ -25,7 +24,7 @@ export default defineComponent({
       default: false,
     }
   },
-  components: {ArrowButton,ProfileCard,TextTitle},
+  components: {ProfileCard,TextTitle},
   setup(props) {
     const goNextHandler = () => {
       window.location.href = "#about"

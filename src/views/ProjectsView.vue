@@ -3,7 +3,7 @@
     <TextTitle icon="user-circle">Projects</TextTitle>
     <div class="grid">
       <ProjectCard 
-        v-for="project in projects.slice(0,showLength)" :key="project" 
+        v-for="project in projects?.slice(0,showLength)" :key="project.github" 
         :project="project"
         data-aos="zoom-in-right"
       ></ProjectCard>
@@ -13,10 +13,8 @@
 </template>
 
 <script lang="ts">
-import ArrowButton from "@/components/Button/ArrowButton.vue";
 import TextTitle from "@/components/Text/TextTitle.vue";
 import FolderCard from "@/components/Card/FolderCard.vue"
-
 import { defineComponent,ref,toRef, } from "vue";
 import { skillsAndTools } from "@/assets/meta.json";
 import ProjectCard from "@/components/Card/ProjectCard.vue";
@@ -30,11 +28,11 @@ export default defineComponent({
       default: false,
     }
   },
-  components: {ArrowButton,TextTitle,FolderCard, ProjectCard,CommonButton},
+  components: {TextTitle,FolderCard, ProjectCard,CommonButton},
   setup(props) {
     const showLength = ref(3);
-    const showMore = () => {
-      showLength.value += 3;
+    const showMore = (num:number) => {
+      showLength.value += num;
     }
     return {
       showLength,

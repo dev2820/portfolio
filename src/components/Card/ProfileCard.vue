@@ -10,14 +10,9 @@
 <script lang="ts">
 import { ref, defineComponent, computed, reactive, toRef } from "vue";
 import noProfile from "@/assets/noProfile.png"
+import profile from "@/assets/profile.jpg";
 export default defineComponent({
   name: "ProfileCard",
-  props: {
-    profile: {
-      type: String,
-      default: "",
-    },
-  },
   emits: ["on", "off"],
   setup(props, { emit }) {
     props = reactive(props);
@@ -26,7 +21,8 @@ export default defineComponent({
       target.src = noProfile;
     }
     return {
-      noImage
+      noImage,
+      profile
     };
   },
 });

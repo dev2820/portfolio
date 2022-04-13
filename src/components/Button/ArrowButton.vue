@@ -1,6 +1,9 @@
 <template>
   <button>
-    <svg xmlns="http://www.w3.org/2000/svg" :style="directStyle" class="icon icon-tabler icon-tabler-arrow-big-top" width="44" height="44" viewBox="0 0 24 24" stroke-width="1" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <svg xmlns="http://www.w3.org/2000/svg" 
+      :class="{'rotate0':direction==='top','rotate90':direction==='right','rotate180':direction==='bottom','rotate270':direction==='left'}" 
+      class="icon icon-tabler icon-tabler-arrow-big-top"
+      width="44" height="44" viewBox="0 0 24 24" stroke-width="1" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
       <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
       <path d="M9 20v-8h-3.586a1 1 0 0 1 -.707 -1.707l6.586 -6.586a1 1 0 0 1 1.414 0l6.586 6.586a1 1 0 0 1 -.707 1.707h-3.586v8a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" />
     </svg>
@@ -12,23 +15,21 @@
 </template>
 
 <script lang="ts">
-import { ref, defineComponent, computed, reactive, toRef } from "vue";
-import arrowLight from "@/assets/png/arrow-big-top-light.png"
-import arrowDark from "@/assets/png/arrow-big-top-dark.png"
-type directionType = 'top'|'botton'|'right'|'left'
+import { ref, defineComponent, computed, reactive, PropType } from "vue";
+const directionType = {
+  top:'top',
+  bottom:'botton',
+  right:'right',
+  left:'left'
+} as const;
+type directionType = typeof directionType[keyof typeof directionType];
 export default defineComponent({
   name: "ArrowButton",
   props: {
     "direction":{
-      type:String as () => directionType,
+      type:String,
       default() {
         return 'top';
-      }
-    },
-    "isDarkmode": {
-      type:Boolean,
-      default() {
-        return false;
       }
     },
     "guideMessage": {
@@ -38,38 +39,26 @@ export default defineComponent({
       }
     }
   },
-  setup(props) {
-    props = reactive(props);
-    const directionRef = toRef(props, "direction");
-    const isDarkmodeRef = toRef(props,'isDarkmode');
-    const directStyle = computed(()=>{
-      let degree = 0;
-      if(directionRef.value === 'top') degree = 0;
-      else if(directionRef.value === 'bottom') degree = 180;
-      else if(directionRef.value === 'right') degree = 90;
-      else if(directionRef.value === 'left') degree = 270;
-      return {
-        'transform':`rotate(${degree}deg)`
-      }
-    })
-
-    const arrowSrc = computed(()=> {
-      if(isDarkmodeRef.value) {
-        return arrowDark;
-      }
-      else {
-        return arrowLight;
-      }
-    })
+  setup() {
     return {
-      directStyle,
-      arrowSrc,
     }
   },
 });
 </script>
 
 <style scoped lang="scss">
+.rotate0 {
+  transform:rotate(0deg);
+}
+.rotate90 {
+  transform:rotate(90deg);
+}
+.rotate180 {
+  transform:rotate(180deg);
+}
+.rotate270 {
+  transform:rotate(270deg);
+}
 button {
   border: none;
   padding: 0.5rem 2rem;

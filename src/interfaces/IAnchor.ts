@@ -1,4 +1,4 @@
 export default interface IAnchor {
-    title: String,
-    link: String
+    title: string,
+    link: string
 }

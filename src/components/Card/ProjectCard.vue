@@ -2,17 +2,17 @@
   <div class="card">
     <div class="main-info">
       <div class="content">
-        <h3 class="title">{{project.title}}</h3>
-        <p class="description">{{project.description}}</p>
+        <h3 class="title">{{project?.title}}</h3>
+        <p class="description">{{project?.description}}</p>
       </div>
       <div class="tag-list">
-        <span class="tag" v-for="tag in project.tags" :key="tag">#{{tag}} </span>
+        <span class="tag" v-for="tag in project?.tags" :key="tag">#{{tag}} </span>
       </div>
     </div>
     <hr/>
     <div class="additional-info">
-      <span class="period">{{project.period}}</span>
-      <a class="github-icon" :href="project.github" target="_blank">
+      <span class="period">{{project?.period}}</span>
+      <a class="github-icon" :href="project?.github" target="_blank">
         <img :src="githubIcon">
       </a>
     </div>
@@ -30,9 +30,9 @@ export default defineComponent({
       type: Object as () => IProject
     }
   },
-  setup(props) {
+  setup() {
     return {
-      githubIcon
+      githubIcon,
     }
   }
 });

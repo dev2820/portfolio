@@ -37,7 +37,6 @@
 </template>
 
 <script lang="ts">
-import ArrowButton from "@/components/Button/ArrowButton.vue";
 import TextTitle from "@/components/Text/TextTitle.vue";
 import FolderCard from "@/components/Card/FolderCard.vue"
 
@@ -51,7 +50,7 @@ export default defineComponent({
       default: false,
     }
   },
-  components: {ArrowButton,TextTitle,FolderCard},
+  components: {TextTitle,FolderCard},
   setup(props) {
     return {
       skillsAndTools
