@@ -26,7 +26,7 @@ button {
   border: none;
   padding: 0.7rem 2rem;
   border-radius: 0.75rem;
-  font-weight:bold;
+  // font-weight:bold;
   font-size:1rem;
   background-color: var(--button-background);
   filter: var(--drop-shadow);
