@@ -86,14 +86,19 @@ html {
   scroll-behavior: smooth;
   background:var(--background);
 }
+@media (min-width: 1000px) {
+  main {
+      max-width:1200px;
+  }
+}
 @media (min-width: 758px) and (max-width: 999px) {
-  #app {
-      min-width:758px;
+  main {
+      max-width:758px;
   }
 }
 @media (min-width: 335px) and (max-width: 758px) {
-  #app {
-      min-width:335px;
+  main {
+      max-width:335px;
   }
 }
 
@@ -140,6 +145,7 @@ body {
     flex-direction:column;
     align-items: center;
     padding:0 40px;
+    margin:0 auto;
   }
   footer {
     box-sizing: border-box;

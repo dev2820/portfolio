@@ -52,9 +52,10 @@ export default defineComponent({
 
 .grid {
   display:grid;
+  margin:0 auto;
   align-items:center;
   justify-items:center;
-  justify-content:space-between;
+  justify-content:center;
   margin-bottom:5rem;
 }
 @media (min-width: 1000px) {
@@ -65,14 +66,15 @@ export default defineComponent({
 }
 @media (min-width: 758px) and (max-width: 999px) {
   .grid {
-        grid-template-columns: repeat(2,1fr);
-            grid-template-rows:1fr;
+    width:600px;
+    grid-template-columns: repeat(2,1fr);
+    grid-auto-rows:452px;
   }
 }
 @media (min-width: 335px) and (max-width: 758px) {
   .grid {
-        grid-template-columns: repeat(1,1fr);
-        grid-auto-rows:440px;
+    grid-template-columns: repeat(1,1fr);
+    grid-auto-rows:452px;
   }
 }
 </style>
