@@ -34,73 +34,73 @@
         "web FE": [
             {
                 "icon":"vue",
-                "link":""
+                "link":"https://kr.vuejs.org/index.html"
             },
             {
                 "icon":"tailwind-css",
-                "link":""
+                "link":"https://tailwindcss.com/"
             },
             {
                 "icon":"storybook",
-                "link":""
+                "link":"https://storybook.js.org/"
             }
         ],
         "Back End": [
             {
                 "icon":"express",
-                "link":""
+                "link":"https://expressjs.com/ko/"
             },
             {
                 "icon":"docker",
-                "link":""
+                "link":"https://www.docker.com/"
             },
             {
                 "icon":"nodejs",
-                "link":""
+                "link":"https://nodejs.org/ko/"
             },
             {
                 "icon":"mariadb",
-                "link":""
+                "link":"https://mariadb.org/"
             }
         ],
         "Language": [
             {
                 "icon":"javascript",
-                "link":""
+                "link":"https://www.ecma-international.org/technical-committees/tc39/"
             },
             {
                 "icon":"typescript",
-                "link":""
+                "link":"https://www.typescriptlang.org/"
             },
             {
                 "icon":"cplusplus",
-                "link":""
+                "link":"https://www.cplusplus.com/"
             }
         ],
         "DevOps": [
             {
                 "icon":"git",
-                "link":""
+                "link":"https://git-scm.com/"
             },
             {
                 "icon":"github",
-                "link":""
+                "link":"https://github.com/"
             }
         ],
         "App": [
             {
                 "icon":"flutter",
-                "link":""
+                "link":"https://flutter.dev/?gclid=CjwKCAjwu_mSBhAYEiwA5BBmf5HfMrlMqk8fhob4s47RiK_kwIbc6-hfo-bJQzIIA3k21DbWQItY0BoCIPgQAvD_BwE&gclsrc=aw.ds"
             }
         ],
         "Others": [
             {
                 "icon":"figma",
-                "link":""
+                "link":"https://www.figma.com/"
             },
             {
                 "icon":"vscode",
-                "link":""
+                "link":"https://code.visualstudio.com/"
             }
         ]
     },
