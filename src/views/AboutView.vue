@@ -39,20 +39,46 @@ export default defineComponent({
 });
 </script>
 <style lang="scss" scoped>
+
+@media (min-width: 758px) and (max-width: 999px) {
+  #about {
+    .content {
+      flex-direction:column-reverse;
+      .profile-image {
+        margin:0 auto 4rem auto;
+      };
+      .introduce {
+        margin:0 auto;
+      }
+    }
+  }
+}
+@media (min-width: 335px) and (max-width: 758px) {
+  #about {
+    .content {
+      flex-direction:column-reverse;
+      .profile-image {
+        margin:0 auto 4rem auto;
+      };
+      .introduce {
+        margin:0 auto;
+      }
+    }
+  }
+}
 #about {
   padding:80px 0;
   height:100%;
-  width:1000px;
+  width:100%;
   .content {
     position:relative;
     display:flex;
-    flex-direction:row;
     justify-content: space-between;
     & > * {
       margin:auto 0;
     };
     div.introduce {
-      width:440px;
+      max-width:440px;
       font-size:var(--xl);
       color:var(--secondary-text);
       line-height:2rem;

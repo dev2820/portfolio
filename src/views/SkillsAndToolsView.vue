@@ -62,9 +62,8 @@ export default defineComponent({
 #skills-and-tools {
   position:relative;
   padding-top:80px;
-  height:calc(1024px - 80px);
-  width:1000px;
-  
+  min-height:calc(1024px - 80px);
+  width:100%;
 }
 
 .folder-grid {
@@ -74,6 +73,18 @@ export default defineComponent({
   align-items:center;
   justify-items:center;
   justify-content:space-between;
+}
+
+@media (min-width: 758px) and (max-width: 999px) {
+  .folder-grid {
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(3,1fr);
+  }
+}
+@media (min-width: 335px) and (max-width: 758px) {
+  .folder-grid {
+      grid-template-columns: repeat(1,1fr);
+  }
 }
 </style>
 

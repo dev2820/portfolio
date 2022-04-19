@@ -3,6 +3,7 @@
     <TextTitle>Contact</TextTitle>
     <div class="row">
       <CloudCard 
+        class="cloud-card"
         :title="contact.address.title" 
         :subtitle="contact.address.subtitle" 
         :link="contact.address.link"
@@ -12,6 +13,7 @@
         data-aos-duration="500"
       ></CloudCard>
       <CloudCard 
+        class="cloud-card"
         :title="contact.blog.title" 
         :subtitle="contact.blog.subtitle" 
         :link="contact.blog.link"
@@ -21,6 +23,7 @@
         data-aos-duration="500"
       ></CloudCard>
       <CloudCard 
+        class="cloud-card"
         :title="contact.email.title" 
         :subtitle="contact.email.subtitle" 
         :link="contact.email.link"
@@ -30,6 +33,7 @@
         data-aos-duration="500"
       ></CloudCard>
       <CloudCard 
+        class="cloud-card"
         :title="contact.github.title" 
         :subtitle="contact.github.subtitle" 
         :link="contact.github.link"
@@ -75,16 +79,20 @@ export default defineComponent({
 });
 </script>
 <style lang="scss" scoped>
+
 #contact {
   position:relative;
   padding-top:80px;
-  height:calc(1024px - 80px);
-  width:1000px;
+  padding-bottom:240px;
+  width:100%;
   div.row {
     margin-top:200px;
     display:flex;
-    flex-direction:row;
-    justify-content: space-between;
+    flex-wrap:wrap;
+    justify-content: space-around;
+    .cloud-card {
+      margin-bottom:40px;
+    }
   }
 }
 </style>

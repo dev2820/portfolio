@@ -47,16 +47,33 @@ export default defineComponent({
 #projects {
   position:relative;
   padding-top:80px;
-  width:1000px;
+  width:100%;
 }
 
 .grid {
   display:grid;
-  grid-template-columns: repeat(3,1fr);
-  grid-template-rows: 500px;
   align-items:center;
   justify-items:center;
   justify-content:space-between;
+  margin-bottom:5rem;
+}
+@media (min-width: 1000px) {
+  .grid {
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows:1fr;
+  }
+}
+@media (min-width: 758px) and (max-width: 999px) {
+  .grid {
+        grid-template-columns: repeat(2,1fr);
+            grid-template-rows:1fr;
+  }
+}
+@media (min-width: 335px) and (max-width: 758px) {
+  .grid {
+        grid-template-columns: repeat(1,1fr);
+        grid-auto-rows:440px;
+  }
 }
 </style>
 

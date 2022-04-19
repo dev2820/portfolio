@@ -30,23 +30,15 @@ export default defineComponent({
 
 <style scoped lang="scss">
 div.profile {
-  width:448px;
-  height:548px;
   display:inline-block;
   & > * {
     position:absolute;
     border-radius: 1rem;
   }
   div.background {
-    width:400px;
-    height:500px;
-    left:48px;
-    top:48px;
     background:var(--primary-500);
   }
   div.profile-image {
-    width:400px;
-    height:500px;
     left:0;
     top:0;
     box-shadow:var(--card-box-shadow);
@@ -57,6 +49,38 @@ div.profile {
       filter:sepia(60%);
       text-align: center;
     }
+  }
+}
+@media (min-width: 758px) {
+  div.profile {
+    width:448px;
+    height:548px;
+  }
+  div.profile-image {
+    width:400px;
+    height:500px;
+  }
+  div.background {
+    width:400px;
+    height:500px;
+    left:48px;
+    top:48px;
+  }
+}
+@media (min-width: 335px) and (max-width: 758px) {
+  div.profile {
+    width:336px;
+    height:411px;
+  }
+  div.profile-image {
+    width:336px;
+    height:375px;
+  }
+  div.background {
+    width:336px;
+    height:375px;
+    left:24px;
+    top:24px;
   }
 }
 </style>

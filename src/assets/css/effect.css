@@ -8,17 +8,21 @@
 :root[color-mode="light"] {
   --drop-shadow: drop-shadow(0px 6px 8px rgba(00, 169, 226, 0.75));
   --card-drop-shadow: drop-shadow(0px 10px 20px rgba(00, 169, 226, 0.5));
-  --primary-linear-gradient: linear-gradient(45deg, #87d3e9 0%, #00a9e2 100%);
+  --primary-linear-gradient: linear-gradient(135deg, #87d3e9 0%, #00a9e2 100%);
   --primary-inner-shadow: inset 0.25rem 0.25rem 0.5rem rgba(00, 137, 194, 0.25),
     inset -0.25rem -0.25rem 0.5rem rgba(0, 137, 194, 0.75);
   --button-inner-shadow: inset 0.125rem 0.125rem 0.25rem
       rgba(122, 206, 235, 0.25),
     inset -0.25rem -0.25rem 0.5rem rgba(122, 206, 235, 0.5);
+  --button-drop-shadow: drop-shadow(0px 6px 8px rgba(00, 169, 226, 0.75));
 }
 :root[color-mode="dark"] {
   --drop-shadow: drop-shadow(0px 6px 8px rgba(18, 18, 18, 0.75));
   --card-drop-shadow: drop-shadow(0px 10px 20px rgba(18, 18, 18, 0.5));
-  --primary-linear-gradient: linear-gradient(90deg, #ffbe00 0%, #ffde7c 100%);
+  --primary-linear-gradient: linear-gradient(135deg, #ffd556 0%, #ffbe00 100%);
+  --primary-inner-shadow: inset 0.25rem 0.25rem 0.5rem rgba(18, 18, 18, 0.25),
+  inset -0.25rem -0.25rem 0.5rem rgba(18, 18, 18, 0.5);
   --button-inner-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.25),
     inset -4px -4px 8px rgba(0, 0, 0, 0.5);
+  --button-drop-shadow: drop-shadow(0px 6px 8px #ffbe00C8);
 }

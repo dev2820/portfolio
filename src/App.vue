@@ -76,15 +76,27 @@ export default defineComponent({
 </script>
 <style lang="scss">
 
-@import url("@/assets/css/color.css");
-@import url("@/assets/css/font.css");
-@import url("@/assets/css/icon.css");
-@import url("@/assets/css/effect.css");
+@import "@/assets/css/color.css";
+@import "@/assets/css/font.css";
+@import "@/assets/css/icon.css";
+@import "@/assets/css/effect.css";
+@import "@/assets/css/mixin";
+
 html {
   scroll-behavior: smooth;
-  width:100%;
   background:var(--background);
 }
+@media (min-width: 758px) and (max-width: 999px) {
+  #app {
+      min-width:758px;
+  }
+}
+@media (min-width: 335px) and (max-width: 758px) {
+  #app {
+      min-width:335px;
+  }
+}
+
 #app {
   font-family: "Nanum Gothic", "Noto Sans KR", Times, Times New Roman, Georgia,
     serif;
@@ -95,12 +107,15 @@ html {
   background:var(--background);
   color:var(--regular-text);
   word-break: break-word;
+  width:100%;
+  overflow:hidden;
   *::selection {
     background:var(--primary-500);
     color: var(--on-primary);
   }
   transition:0.3s;
 }
+
 body {
   width:100%;
   margin:0;
@@ -108,6 +123,7 @@ body {
     background:var(--glass-background);
     position:fixed;
     top:0;
+    left:0;
     width:100%;
     height:5rem;
     display:flex;
@@ -123,11 +139,13 @@ body {
     display:flex;
     flex-direction:column;
     align-items: center;
+    padding:0 40px;
   }
   footer {
+    box-sizing: border-box;
     height:500px;
     width:100%;
-    padding:1rem 0;
+    padding:1rem;
     background:var(--ground);
     border-top:1rem solid var(--grass);
     display:flex;
@@ -145,7 +163,6 @@ body {
   position:fixed;
   right:1rem;
   bottom:1rem;
-  margin-top:2rem;
   z-index:100;
 }
 a {

@@ -44,18 +44,33 @@ export default defineComponent({
   .square {
     display:inline-block;
     margin:auto 0;
-    width:64px;
-    height:64px;
     background:var(--primary-500);
   }
   h2 {
     margin:0;
     margin-left:24px;
-    font-size: var(--5xl);
     display:inline-block;
   }
 }
 .round {
   border-radius:1rem;
+}
+@media (min-width: 758px) {
+  h2 {
+      font-size:var(--5xl);
+  }
+  .square {
+    width:var(--5xl);
+    height:var(--5xl);
+  }
+}
+@media (min-width: 335px) and (max-width: 758px) {
+  h2 {
+      font-size:var(--4xl);
+  }
+  .square {
+    width:var(--4xl);
+    height:var(--4xl);
+  }
 }
 </style>

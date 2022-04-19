@@ -36,6 +36,7 @@ button {
   &.primary {
     background: var(--primary-linear-gradient);
     box-shadow: var(--primary-inner-shadow);
+    filter: var(--button-drop-shadow);
   }
   &:hover {
     background: var(--primary-linear-gradient);

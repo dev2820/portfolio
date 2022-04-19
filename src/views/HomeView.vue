@@ -65,7 +65,7 @@ export default defineComponent({
 #home {
   position:relative;
   height:1024px;
-  width:1000px;
+  width:100%;
   .cloud {
     position:absolute;
     &.small {
@@ -97,16 +97,11 @@ export default defineComponent({
     position:absolute;
     height:500px;
     width:500px;
-    left:464px;
-    top:226px;
     animation:floating 3s infinite ease-in;
   }
   p {
     user-select:none;
     position:absolute;
-    left:108px;
-    top:360px;
-    font-size: var(--6xl);
     font-weight: var(--bold);
     text-align:left;
     margin:0;
@@ -153,6 +148,57 @@ export default defineComponent({
     height:9rem;
     left:50%;
     margin-left:-4.5rem;
+  }
+}
+@media (min-width: 1000px) {
+  .character {
+    left:464px;
+    top:226px;
+  }
+  p {
+    left:108px;
+    top:360px;
+    font-size: var(--6xl);
+    &.job {
+      transform:translateY(calc(var(--6xl)*1.375));
+    }
+    &.name {
+      transform:translateY(calc(var(--6xl)*2.75));
+    }
+  }
+}
+@media (min-width: 758px) and (max-width: 999px) {
+  .character {
+    right:-4rem;
+    top:124px;
+  }
+  p {
+    left:108px;
+    top:360px;
+    font-size: var(--6xl);
+    &.job {
+      transform:translateY(calc(var(--6xl)*1.375));
+    }
+    &.name {
+      transform:translateY(calc(var(--6xl)*2.75));
+    }
+  }
+
+}
+@media (min-width: 335px) and (max-width: 758px) {
+  .character {
+    display:none;
+  }
+  p {
+    left:20px;
+    top:360px;
+    font-size: var(--5xl);
+    &.job {
+      transform:translateY(calc(var(--5xl)*1.375));
+    }
+    &.name {
+      transform:translateY(calc(var(--5xl)*2.75));
+    }
   }
 }
 @keyframes flow-right {
