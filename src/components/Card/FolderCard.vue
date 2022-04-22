@@ -2,14 +2,13 @@
   <div class="folder">
     <h3 class="folder-title">{{title}}</h3>
     <TranslucentCard class="card app-grid">
-      <a v-for="item in items" :key="item.icon" 
-        :href="item.link" 
+      <button v-for="item in items" :key="item.icon" 
         target="_blank" 
         class="app-shape" 
         :class="item.icon"
       >
-      </a>
-      
+        <span class="tooltip">{{item.proficiency}}</span>
+      </button>
     </TranslucentCard>
   </div>
 </template>
@@ -51,25 +50,48 @@ export default defineComponent({
     align-items:center;
     justify-items:center;
     justify-content:space-between;
-    a.app-shape {
+    button.app-shape {
+      border:none;
+      cursor:pointer;
       text-decoration: none;
       color: var(--on-surface);
       transition:0.3s;
       border-radius:1rem;
       box-shadow:var(--card-box-shadow);
     }
-    a.app-shape:hover {
+    button.app-shape:hover {
       transform:translateY(-4px);
       box-shadow:var(--card-box-shadow-16dp);
-      .caption {
-        visibility: visible;
+      span.tooltip {
+        opacity:1;
       }
     }
   }
 }
 span.tooltip {
+  transition:0.3s;
+  opacity:0;
   padding:8px 12px;
   border-radius:1rem;
+  background: var(--primary-500);
+  color:var(--on-primary);
+  position:absolute;
+  width:160px;
+  left:2rem;
+  margin-left:-5rem;
+  top:0;
+  margin-top: -60px;
+  font-size:var(--base);
+}
+span.tooltip::after {
+  content:'▼';
+  font-size:1.2rem;
+  position:absolute;
+  color: var(--primary-500);
+  left:50%;
+  margin-left:-0.6rem;
+  bottom:-1rem;
+
 
 }
 </style>

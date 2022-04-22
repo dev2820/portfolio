@@ -1,4 +1,6 @@
 export default interface Item {
     icon:string,
-    link:string
+    proficiency:string,
+    description:string,
+    feature:Array<string>
 }
