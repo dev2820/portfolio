@@ -52,7 +52,6 @@ export default defineComponent({
     justify-content:space-between;
     button.app-shape {
       border:none;
-      cursor:pointer;
       text-decoration: none;
       color: var(--on-surface);
       transition:0.3s;

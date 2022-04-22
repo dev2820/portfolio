@@ -119,10 +119,35 @@
     },
     "projects": [
         {
+            "title":"Sweater",
+            "description":"README 작성하는대로 글 쓸게유...",
+            "tags":["Electron.js","Vue.js","Tensorflow"],
+            "period":"2021-07 ~ 진행중",
+            "blog":"",
+            "github":"https://github.com/team-naming-1-hour/sweater-app"
+        },
+        {
+            "title":"Predev",
+            "description":"다양한 툴과 애자일에 대해서 많이 배울 수 있었지만, 무엇보다도 기획에 대해 많이 배울 수 있어 기억에 많이 남는 프로젝트 입니다. 소스코드는 카카오브레인 소속이라 공개할 수 없습니다.",
+            "tags":["Vue.js","composition api","Tailwind CSS","Storybook"],
+            "period":"2021-07 ~ 2021-08",
+            "blog":"https://velog.io/@dev2820/카카오-브레인-패스파인더-스프린트-0주차",
+            "github":""
+        },
+        {
+            "title":"portfolio",
+            "description":"개성이 최대로 드러나는 포트폴리오를 작성하고 싶어 만들게된 포트폴리오 웹페이지입니다. ",
+            "tags":["Vue.js","Figma","AOS","Scss","Typescript"],
+            "period":"2022-03 ~ 2022-04",
+            "blog":"https://velog.io/@dev2820/포트폴리오-개발-정리",
+            "github":"https://github.com/dev2820/portfolio"
+        },
+        {
             "title":"Eye Guardian",
             "description":"‘eye-guardian’은 사용자의 눈 건강을 해치는 습관들을 감지 및 교정해주는 프로그램입니다.",
             "tags":["Electron.js","Vue.js","Tensorflow"],
             "period":"2021-07 ~ 2021-08",
+            "blog":"https://velog.io/@dev2820/프로젝트-eye-guardian-시력보호-가이드-프로그램-짧은-개발-후기",
             "github":"https://github.com/dev2820/eye-guardian"
         }
     ],

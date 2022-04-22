@@ -12,7 +12,10 @@
     <hr/>
     <div class="additional-info">
       <span class="period">{{project?.period}}</span>
-      <a class="github-icon" :href="project?.github" target="_blank">
+      <a class="blog-icon" v-if="project?.blog.length > 0" :href="project?.blog" target="_blank"> 
+        <img :src="blogIcon">
+      </a>
+      <a class="github-icon" v-if="project?.github.length > 0" :href="project?.github" target="_blank">
         <img :src="githubIcon">
       </a>
     </div>
@@ -22,6 +25,7 @@
 <script lang="ts">
 import { ref, defineComponent, computed, reactive, toRef } from "vue";
 import githubIcon from "@/assets/svg/brand-github.svg"
+import blogIcon from "@/assets/svg/blog.svg"
 import IProject from "@/interfaces/IProject";
 export default defineComponent({
   name: "ProjectCard",
@@ -33,6 +37,7 @@ export default defineComponent({
   setup() {
     return {
       githubIcon,
+      blogIcon
     }
   }
 });
@@ -65,7 +70,7 @@ hr {
       text-align:start;
       color:var(--on-surface);
       opacity:0.8;
-      line-height:1.5rem;
+      line-height:1.625rem;
       margin-bottom:32px;
     }
     .tag-list {
@@ -92,7 +97,7 @@ hr {
     .period {
       font-weight:bold;
     }
-    a.github-icon {
+    a.github-icon,a.blog-icon {
       img {
         height:32px;
       }

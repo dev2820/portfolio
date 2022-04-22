@@ -61,7 +61,7 @@ export default defineComponent({
 @media (min-width: 1000px) {
   .grid {
     grid-template-columns: repeat(3,1fr);
-    grid-template-rows:1fr;
+    grid-auto-rows:452px;
   }
 }
 @media (min-width: 758px) and (max-width: 999px) {
