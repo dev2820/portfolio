@@ -27,7 +27,7 @@ https://dev2820.github.io/
 
 figma community에서 3D 에셋을 가져와 사용했습니다. 출처는 아래
 
-[3D 캐릭터 by Alzea Alzea Arafat](https://www.figma.com/community/file/890095002328610853/SALY---3D-Illustration-Pack)
+[3D 캐릭터 by Alzea Alzea Arafat](https://www.figma.com/community/file/890095002328610853/SALY---3D-Illustration-Pack)  
 [3D 아이콘 by REALVJY](https://www.figma.com/community/file/1030350068466019692/3dicons---Open-source-3D-icon-library)
 
 구름이나 해는 직접 만든거라 위 링크에서 확인할 수 없습니다.
