@@ -1,33 +1,37 @@
 # portfolio
 
-포트폴리오 페이지
+포트폴리오 웹페이지 입니다.  
 
-# Vue 3 + Typescript + Vite
+`클레이모피즘` 한 디자인에 하늘에서 땅까지 이어지는 컨셉    
+`반응형 웹페이지` 로 모바일,태블릿 환경에서도 같은 UX를 경험할 수 있음  
+`다크 모드` 로 OS에서 다크모드를 사용하는 유저도 같은 테마로 웹사이트를 이용할 수 있게 함   
+`AOS` 로 스크롤 애니메이션을 주어 웹사이트를 보는 재미를 느낄 수 있게 함  
+`CSS sprites` 로 이미지 랜더링을 최적화해 웹사이트가 더 빨리 로딩 될 수 있게 함  
 
-This template should help get you started developing with Vue 3 and Typescript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+### 구성
+about 페이지
+skills and tools 페이지
+projects 페이지
+contact 페이지
 
-## Recommended IDE Setup
+## 호스팅
+Github Pages를 이용해 호스팅중입니다.
+https://dev2820.github.io/
 
-- [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
+## 사용 스택
+- Vue 3 (composition api)
+- Vite
+- Scss
+- Typescript
 
-## Type Support For `.vue` Imports in TS
+## 사용한 에셋
 
-Since TypeScript cannot handle type information for `.vue` imports, they are shimmed to be a generic Vue component type by default. In most cases this is fine if you don't really care about component prop types outside of templates. However, if you wish to get actual prop types in `.vue` imports (for example to get props validation when using manual `h(...)` calls), you can enable Volar's `.vue` type support plugin by running `Volar: Switch TS Plugin on/off` from VSCode command palette.
+figma community에서 3D 에셋을 가져와 사용했습니다. 출처는 아래
 
-## todo
+[3D 캐릭터 by Alzea Alzea Arafat](https://www.figma.com/community/file/890095002328610853/SALY---3D-Illustration-Pack)  
+[3D 아이콘 by REALVJY](https://www.figma.com/community/file/1030350068466019692/3dicons---Open-source-3D-icon-library)
 
-## Done
+구름이나 해는 직접 만든거라 위 링크에서 확인할 수 없습니다.
 
-vite + typescript + vue3
-storybook 설치
-scss 설치(style lang="scss" scoped 로 바로 쓰면 됨)
-스토리북 vite 코어 사용
-스토리북 addon-actions 설치
-npm i -D @storybook/addon-actions
-main.js의 addons에 "@storybook/addon-actions" 추가
-eslint 설정
-https://velog.io/@noyo0123/lint-prettier-%EC%84%A4%EC%A0%95
-위 블로그를 참조
-vite @ alias 추가
-디자인 시스템 css root 변수 추가
-Nanum Gothic, Noto Sans KR 폰트 추가
+## 남은 이슈
+- Galaxy Fold에선 화면이 이상하게 나오는 것을 확인했습니다.
