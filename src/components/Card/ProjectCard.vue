@@ -2,20 +2,20 @@
   <div class="card">
     <div class="main-info">
       <div class="content">
-        <h3 class="title">{{project?.title}}</h3>
-        <p class="description">{{project?.description}}</p>
+        <h3 class="title">{{title}}</h3>
+        <p class="description">{{description}}</p>
       </div>
       <div class="tag-list">
-        <span class="tag" v-for="tag in project?.tags" :key="tag">#{{tag}} </span>
+        <span class="tag" v-for="tag in tags" :key="tag">#{{tag}} </span>
       </div>
     </div>
     <hr/>
     <div class="additional-info">
-      <span class="period">{{project?.period}}</span>
-      <a class="blog-icon" v-if="project?.blog.length > 0" :href="project?.blog" target="_blank"> 
+      <span class="period">{{period}}</span>
+      <a class="blog-icon" v-if="blog? blog.length > 0 : false" :href="blog" target="_blank"> 
         <img :src="blogIcon">
       </a>
-      <a class="github-icon" v-if="project?.github.length > 0" :href="project?.github" target="_blank">
+      <a class="github-icon" v-if="github? github.length > 0: false" :href="github" target="_blank">
         <img :src="githubIcon">
       </a>
     </div>
@@ -34,10 +34,16 @@ export default defineComponent({
       type: Object as () => IProject
     }
   },
-  setup() {
+  setup(props) {
     return {
       githubIcon,
-      blogIcon
+      blogIcon,
+      title:props.project?.title,
+      github:props.project?.github,
+      blog:props.project?.blog,
+      description:props.project?.description,
+      period:props.project?.period,
+      tags:props.project?.tags,
     }
   }
 });

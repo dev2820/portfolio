@@ -3,5 +3,6 @@ export default interface IProject {
     description:string,
     tags:Array<string>,
     github:string,
+    blog:string,
     period:string
 }
