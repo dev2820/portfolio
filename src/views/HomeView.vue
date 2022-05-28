@@ -1,10 +1,10 @@
 <template>
   <section id="home">
-    <img class="cloud small" src="@/assets/myCloud.png"/>
-    <img class="cloud big" src="@/assets/myCloud.png"/>
-    <img class="sun big" :class="{appear:!isDarkmodeRef}" src="@/assets/mySun.png"/>
-    <img class="moon big" :class="{appear:isDarkmodeRef}" src="@/assets/myMoon.png"/>
-    <img class="character" src="@/assets/myCharacter.png"/>
+    <img class="cloud small" src="@/assets/myCloud.webp"/>
+    <img class="cloud big" src="@/assets/myCloud.webp"/>
+    <img class="sun big" :class="{appear:!isDarkmodeRef}" src="@/assets/mySun.webp"/>
+    <img class="moon big" :class="{appear:isDarkmodeRef}" src="@/assets/myMoon.webp"/>
+    <img class="character" src="@/assets/myCharacter.webp"/>
     <p class="greeting" :class="{'show':showAfter300}">{{greeting}}</p>
     <p class="job" :class="{'show':showAfter1000}"><font>{{position}}</font> {{job}}</p>
     <p class="name" :class="{'show':showAfter1700}"><font>{{name}}</font> {{iam}}</p>

@@ -2,8 +2,8 @@
   <label class="switch round">
     <input type="checkbox" @change="onClick($event)" :checked="checked" />
     <span class="slider round" />
-    <img src="@/assets/png/sun.png" class="icon sun"/>
-    <img src="@/assets/png/moon.png" class="icon moon"/>
+    <img src="@/assets/png/sun.webp" class="icon sun"/>
+    <img src="@/assets/png/moon.webp" class="icon moon"/>
   </label>
 </template>
 

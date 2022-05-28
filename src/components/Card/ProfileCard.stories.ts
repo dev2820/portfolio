@@ -1,6 +1,6 @@
 import ProfileCard from '../Card/ProfileCard.vue';
 import { action } from "@storybook/addon-actions"
-import dummy from "@/assets/dummy_profile.png"
+import dummy from "@/assets/dummy_profile.webp"
 export default {
   component: ProfileCard,
   title: 'Profile/ProfileCard',

@@ -50,10 +50,10 @@
 import TextTitle from "@/components/Text/TextTitle.vue";
 import CloudCard from "@/components/Card/CloudCard.vue"
 
-import mappin3dIcon from "@/assets/png/mappin3dIcon.png";
-import pencil3dIcon from "@/assets/png/pencil3dIcon.png";
-import email3dIcon from "@/assets/png/email3dIcon.png";
-import Octocat from "@/assets/png/Octocat.png";
+import mappin3dIcon from "@/assets/png/mappin3dIcon.webp";
+import pencil3dIcon from "@/assets/png/pencil3dIcon.webp";
+import email3dIcon from "@/assets/png/email3dIcon.webp";
+import Octocat from "@/assets/png/Octocat.webp";
 import { contact } from "@/assets/meta.json"
 import { defineComponent,ref,toRef, } from "vue";
 import { skillsAndTools } from "@/assets/meta.json";
