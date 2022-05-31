@@ -5,26 +5,10 @@
     <link rel="icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <title>웹 개발자 양기조</title>
   </head>
   <body>
     <div id="app"></div>
     <script type="module" src="/src/main.ts"></script>
-    <script>
-      const mode = window.localStorage.getItem('isDarkmode');
-      if(!!mode) { // 저장된 다크모드 여부
-        document.documentElement.setAttribute('color-mode',mode);
-      }
-      else { // 저장된 다크모드 여부가 없다면 
-        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-          document.documentElement.setAttribute('color-mode', 'dark');
-        }
-        else {
-          document.documentElement.setAttribute('color-mode', 'light');
-        }
-      }
-      AOS.init();
-    </script>
   </body>
 </html>
