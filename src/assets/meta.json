@@ -121,9 +121,9 @@
         {
             "title":"Sweater",
             "description":"'뭘 입을지 고민하는 시간을 줄여줄 수 있을까?' 라는 주제로 출발하여 제작하게 된 '기온별 의상 추천 앱' 입니다.",
-            "tags":["Electron.js","Vue.js","Tensorflow"],
-            "period":"2021-07 ~ 진행중",
-            "blog":"",
+            "tags":["Flutter","Firebase"],
+            "period":"2022-03 ~ 2022-05",
+            "blog":"https://velog.io/@dev2820/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-Sweater-%ED%9A%8C%EA%B3%A0-%EC%A2%8B%EC%95%98%EB%8D%98-%EC%A0%90",
             "github":"https://github.com/team-naming-1-hour/sweater-app"
         },
         {
