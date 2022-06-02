@@ -119,7 +119,7 @@
     },
     "projects": [
         {
-            "title":"Sweater",
+            "title":"Sweather",
             "description":"'뭘 입을지 고민하는 시간을 줄여줄 수 있을까?' 라는 주제로 출발하여 제작하게 된 '기온별 의상 추천 앱' 입니다.",
             "tags":["Flutter","Firebase"],
             "period":"2022-03 ~ 2022-05",
