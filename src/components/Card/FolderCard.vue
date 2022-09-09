@@ -61,7 +61,7 @@ export default defineComponent({
       box-shadow: var(--card-box-shadow);
     }
     button.app-shape:hover {
-      transform: translateY(-4px);
+      transform: translateY(-0.25rem);
       box-shadow: var(--card-box-shadow-16dp);
       span.tooltip {
         opacity: 1;
@@ -81,7 +81,7 @@ span.tooltip {
   left: 2rem;
   margin-left: -5rem;
   top: 0;
-  margin-top: -60px;
+  margin-top: -4.25rem;
   font-size: var(--base);
 }
 span.tooltip::after {
