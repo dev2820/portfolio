@@ -16,6 +16,7 @@
         class="blog-icon"
         v-if="blog ? blog.length > 0 : false"
         :href="blog"
+        title="프로젝트 후기"
         target="_blank"
       >
         <img :src="blogIcon" />
@@ -24,6 +25,7 @@
         class="github-icon"
         v-if="github ? github.length > 0 : false"
         :href="github"
+        title="깃허브 링크"
         target="_blank"
       >
         <img :src="githubIcon" />
