@@ -1,160 +1,180 @@
 {
-    "anchor": [
-        {
-            "title":"Home",
-            "link":"#home"
-        },
-        {
-            "title":"About",
-            "link":"#about"
-        },
-        {
-            "title":"Skill",
-            "link":"#skills-and-tools"
-        },
-        {
-            "title":"Projects",
-            "link":"#projects"
-        },
-        {
-            "title":"Contact",
-            "link":"#contact"
-        }
-    ],
-    "home": {
-        "position": "FE",
-        "job": "개발자",
-        "name": "양기조"
+  "anchor": [
+    {
+      "title": "Home",
+      "link": "#home"
     },
-    "about" : {
-        "introduce":"FE 뿐만 아니라 시스템 전체를 이해하려고 노력합니다. 프로젝트에서 가장 중요한 능력은 '소통' 이라고 생각합니다. 코드 리뷰하는 시간과 스프린트 회고하는 시간을 제일 좋아합니다.",
-        "firstLine":"안녕하세요. FE 개발자 양기조 입니다."
+    {
+      "title": "About",
+      "link": "#about"
     },
-    "skillsAndTools": {
-        "web FE": [
-            {
-                "icon":"vue",
-                "proficiency":"업무 활용 가능 수준",
-                "description":"가장 친숙한 웹 프레임워크이고 현재도 주력으로 사용하고 있습니다. 2022년도에 들어서며 ‘Vue 3.0’을 주로 사용하며 익숙해지는 중입니다.",
-                "feature": ["vuex를 이용한 상태 관리","vue-router로 페이지 라우팅","TS와 compositioni api"]
-            },
-            {
-                "icon":"tailwind-css",
-                "proficiency":"업무 활용 가능 수준",
-                "description":"팀원들과 통일된 형식의 CSS 코드를 공유할 수 있고, CSS 코드량을 많이 줄일 수 있어 좋아하는 프레임워크입니다.",
-                "feature": ["theme 기능을 이용해 동일한 디자인 시스템 구축"]
-            },
-            {
-                "icon":"storybook",
-                "proficiency":"간단한 기능 구현 수준",
-                "description":"다양한 시나리오에서 동작하는 컴포넌트를 구현할 때 사용하고 있습니다. 아직 Storybook의 여러 유용한 플러그인들을 제대로 활용하고 있지 못해 아쉬운 툴입니다.",
-                "feature": ["독립적인 UI 컴포넌트 개발"]
-            }
-        ],
-        "Back End": [
-            {
-                "icon":"express",
-                "proficiency":"간단한 기능 구현 수준",
-                "description":"RESTful한 API 생성 및 로그인 시스템 구현에 주로 사용합니다. 현재는 프론트를 주로 공부하고 있기 때문에 ‘간단한 기능 구현 수준’으로 낮췄습니다.",
-                "feature": ["middleware를 활용한 JWT 인증 시스템 구현"]
-            },
-            {
-                "icon":"nodejs",
-                "proficiency":"간단한 기능 구현 수준",
-                "description":"프론트 외에 백엔드를 개발해야하는 일이 있을때 주로 사용합니다. 현재는 프론트를 주로 공부하고 있기 때문에 ‘간단한 기능 구현 수준’으로 낮췄습니다.",
-                "feature": ["cluster를 이용한 워커 관리","child_process를 이용한 자식 프로세스 생성","mysql2/promise를 이용해 mariaDB와 connection pool 생성"]
-            },
-            {
-                "icon":"docker",
-                "proficiency":"간단한 기능 구현 수준",
-                "description":"Nodejs, Express와 마찬가지로 백엔드 환경을 구축하는데 주로 사용했습니다.",
-                "feature": ["Docker compose와 nginx로 부하를 여러 컨테이너로 분산시키는 서버 구조 작성"]
-            }
-
-        ],
-        "Language": [
-            {
-                "icon":"javascript",
-                "proficiency":"업무 활용 가능 수준",
-                "description":"웹을 공부하면서, 또 백엔드는 Nodejs를 주로 쓰게 되면서 가장 친숙해졌고, 현재도 주로 쓰는 언어입니다.",
-                "feature": []
-            },
-            {
-                "icon":"typescript",
-                "proficiency":"간단한 기능 구현 수준",
-                "description":"클린 코드 작성, 안전한 코드 작성을 하기에 JavaScript의 한계를 느끼면서 TypeScript를 사용하게 되었고, 아직은 공부하며 숙련도를 높이는 중입니다.",
-                "feature": []
-            }
-        ],
-        "Others": [
-            {
-                "icon":"figma",
-                "proficiency":"업무 활용 가능 수준",
-                "description":"협업 툴로도, 디자인 툴로도 애용하는 중인 툴입니다.",
-                "feature": ["유저 스토리 매핑, 회고 등 다양한 협업 상황에 활용","간단한 디자인 시스템 구축, 프로토타입 제작"]
-            },
-            {
-                "icon":"vscode",
-                "proficiency":"업무 활용 가능 수준",
-                "description":"주로 사용하는 IDE 입니다. 제일 좋아하는 테마는 dracular theme 입니다.",
-                "feature": ["메인 IDE"]
-            }
-        ]
+    {
+      "title": "Skill",
+      "link": "#skills-and-tools"
     },
-    "projects": [
-        {
-            "title":"Sweather",
-            "description":"'뭘 입을지 고민하는 시간을 줄여줄 수 있을까?' 라는 주제로 출발하여 제작하게 된 '기온별 의상 추천 앱' 입니다.",
-            "tags":["Flutter","Firebase"],
-            "period":"2022-03 ~ 2022-05",
-            "blog":"https://velog.io/@dev2820/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-Sweater-%ED%9A%8C%EA%B3%A0-%EC%A2%8B%EC%95%98%EB%8D%98-%EC%A0%90",
-            "github":"https://github.com/team-naming-1-hour/sweater-app"
-        },
-        {
-            "title":"portfolio",
-            "description":"개성이 최대로 드러나는 포트폴리오를 작성하고 싶어 만들게된 포트폴리오 웹페이지입니다. ",
-            "tags":["Vue.js","Figma","AOS","Scss","Typescript"],
-            "period":"2022-03 ~ 2022-04",
-            "blog":"https://velog.io/@dev2820/포트폴리오-개발-정리",
-            "github":"https://github.com/dev2820/portfolio"
-        },
-        {
-            "title":"Predev",
-            "description":"'개발자를 위한 학교를 만들 수 있을까?' 라는 Unthinkable Question에서 출발한 코딩 강의 검색 사이트 입니다. 소스코드는 카카오브레인 소속이라 공개할 수 없습니다.",
-            "tags":["Vue.js","composition api","Tailwind CSS","Storybook"],
-            "period":"2021-12 ~ 2022-02",
-            "blog":"https://velog.io/@dev2820/카카오-브레인-패스파인더-스프린트-0주차",
-            "github":""
-        },
-        {
-            "title":"Eye Guardian",
-            "description":"‘eye-guardian’은 사용자의 눈 건강을 해치는 습관들을 감지 및 교정해주는 프로그램입니다.",
-            "tags":["Electron.js","Vue.js","Tensorflow"],
-            "period":"2021-07 ~ 2021-08",
-            "blog":"https://velog.io/@dev2820/프로젝트-eye-guardian-시력보호-가이드-프로그램-짧은-개발-후기",
-            "github":"https://github.com/dev2820/eye-guardian"
-        }
-    ],
-    "contact": {
-        "address": {
-            "title":"Address",
-            "subtitle":"Seoul in Korea",
-            "link":"https://goo.gl/maps/Gz7rsBFS1dEWN7TS9"
-        },
-        "blog": {
-            "title":"Blog",
-            "subtitle":"velog",
-            "link":"https://velog.io/@dev2820"
-        },
-        "email": {
-            "title":"Email",
-            "subtitle":"second28200@gmail.com",
-            "link":"mailto:second28200@gmail.com"
-        },
-        "github": {
-            "title":"Github",
-            "subtitle":"dev2820",
-            "link":"https://github.com/dev2820"
-        }
+    {
+      "title": "Projects",
+      "link": "#projects"
+    },
+    {
+      "title": "Contact",
+      "link": "#contact"
     }
+  ],
+  "home": {
+    "position": "FE",
+    "job": "개발자",
+    "name": "양기조"
+  },
+  "about": {
+    "introduce": "FE 뿐만 아니라 시스템 전체를 이해하려고 노력합니다. 프로젝트에서 가장 중요한 능력은 '소통' 이라고 생각합니다. 코드 리뷰하는 시간과 스프린트 회고하는 시간을 제일 좋아합니다.",
+    "firstLine": "안녕하세요. FE 개발자 양기조 입니다."
+  },
+  "skillsAndTools": {
+    "web FE": [
+      {
+        "icon": "vue",
+        "proficiency": "업무 활용 가능 수준",
+        "description": "가장 친숙한 웹 프레임워크이고 현재도 주력으로 사용하고 있습니다. 2022년도에 들어서며 ‘Vue 3.0’을 주로 사용하며 익숙해지는 중입니다.",
+        "feature": [
+          "vuex를 이용한 상태 관리",
+          "vue-router로 페이지 라우팅",
+          "TS와 compositioni api"
+        ]
+      },
+      {
+        "icon": "tailwind-css",
+        "proficiency": "업무 활용 가능 수준",
+        "description": "팀원들과 통일된 형식의 CSS 코드를 공유할 수 있고, CSS 코드량을 많이 줄일 수 있어 좋아하는 프레임워크입니다.",
+        "feature": ["theme 기능을 이용해 동일한 디자인 시스템 구축"]
+      },
+      {
+        "icon": "storybook",
+        "proficiency": "간단한 기능 구현 수준",
+        "description": "다양한 시나리오에서 동작하는 컴포넌트를 구현할 때 사용하고 있습니다.",
+        "feature": ["독립적인 UI 컴포넌트 개발"]
+      }
+    ],
+    "Back End": [
+      {
+        "icon": "express",
+        "proficiency": "간단한 기능 구현 수준",
+        "description": "RESTful한 API 생성 및 로그인 시스템 구현에 주로 사용합니다. 현재는 프론트를 주로 공부하고 있기 때문에 ‘간단한 기능 구현 수준’으로 낮췄습니다.",
+        "feature": ["middleware를 활용한 JWT 인증 시스템 구현"]
+      },
+      {
+        "icon": "nodejs",
+        "proficiency": "간단한 기능 구현 수준",
+        "description": "프론트 외에 백엔드를 개발해야하는 일이 있을때 주로 사용합니다. 현재는 프론트를 주로 공부하고 있기 때문에 ‘간단한 기능 구현 수준’으로 낮췄습니다.",
+        "feature": [
+          "cluster를 이용한 워커 관리",
+          "child_process를 이용한 자식 프로세스 생성",
+          "mysql2/promise를 이용해 mariaDB와 connection pool 생성"
+        ]
+      },
+      {
+        "icon": "docker",
+        "proficiency": "간단한 기능 구현 수준",
+        "description": "Nodejs, Express와 마찬가지로 백엔드 환경을 구축하는데 주로 사용했습니다.",
+        "feature": [
+          "Docker compose와 nginx로 부하를 여러 컨테이너로 분산시키는 서버 구조 작성"
+        ]
+      }
+    ],
+    "Language": [
+      {
+        "icon": "javascript",
+        "proficiency": "업무 활용 가능 수준",
+        "description": "웹을 공부하면서, 또 백엔드는 Nodejs를 주로 쓰게 되면서 가장 친숙해졌고, 현재도 주로 쓰는 언어입니다.",
+        "feature": []
+      },
+      {
+        "icon": "typescript",
+        "proficiency": "업무 활용 가능 수준",
+        "description": "클린 코드 작성, 안전한 코드 작성을 하기에 JavaScript의 한계를 느끼면서 TypeScript를 사용하게 되었고, 아직은 공부하며 숙련도를 높이는 중입니다.",
+        "feature": []
+      }
+    ],
+    "Others": [
+      {
+        "icon": "figma",
+        "proficiency": "업무 활용 가능 수준",
+        "description": "협업 툴로도, 디자인 툴로도 애용하는 중인 툴입니다.",
+        "feature": [
+          "유저 스토리 매핑, 회고 등 다양한 협업 상황에 활용",
+          "간단한 디자인 시스템 구축, 프로토타입 제작"
+        ]
+      },
+      {
+        "icon": "vscode",
+        "proficiency": "업무 활용 가능 수준",
+        "description": "주로 사용하는 IDE 입니다. 제일 좋아하는 테마는 dracular theme 입니다.",
+        "feature": ["메인 IDE"]
+      }
+    ]
+  },
+  "projects": [
+    {
+      "title": "곰국 뷰어",
+      "description": "대학생들을 위한 논문 전용 PDF Viewer 입니다. 논문을 읽을 때 사용하는 여러 가지 툴들을 종합하여 제공하여 논문 읽기 경험을 개선하는 것을 목표로 두고 있습니다.",
+      "tags": ["Vue3", "Typescript", "PDF.js", "editor.js", "Scss"],
+      "period": "2022-09 ~ 2022-12",
+      "blog": "https://velog.io/@dev2820/%EA%B3%B0%EA%B5%AD-%EB%B7%B0%EC%96%B4-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%ED%9A%8C%EA%B3%A0",
+      "github": "https://github.com/ssu-memorier/gomguk-viewer-fe"
+    },
+    {
+      "title": "Sweather",
+      "description": "'뭘 입을지 고민하는 시간을 줄여줄 수 있을까?' 라는 주제로 출발하여 제작하게 된 '기온별 의상 추천 앱' 입니다.",
+      "tags": ["Flutter", "Firebase"],
+      "period": "2022-03 ~ 2022-05",
+      "blog": "https://velog.io/@dev2820/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-Sweater-%ED%9A%8C%EA%B3%A0-%EC%A2%8B%EC%95%98%EB%8D%98-%EC%A0%90",
+      "github": "https://github.com/team-naming-1-hour/sweater-app"
+    },
+    {
+      "title": "portfolio",
+      "description": "개성이 최대로 드러나는 포트폴리오를 작성하고 싶어 만들게된 포트폴리오 웹페이지입니다. ",
+      "tags": ["Vue.js", "Figma", "AOS", "Scss", "Typescript"],
+      "period": "2022-03 ~ 2022-04",
+      "blog": "https://velog.io/@dev2820/포트폴리오-개발-정리",
+      "github": "https://github.com/dev2820/portfolio"
+    },
+    {
+      "title": "Predev",
+      "description": "'개발자를 위한 학교를 만들 수 있을까?' 라는 Unthinkable Question에서 출발한 코딩 강의 검색 사이트 입니다. 소스코드는 카카오브레인 소속이라 공개할 수 없습니다.",
+      "tags": ["Vue.js", "composition api", "Tailwind CSS", "Storybook"],
+      "period": "2021-12 ~ 2022-02",
+      "blog": "https://velog.io/@dev2820/카카오-브레인-패스파인더-스프린트-0주차",
+      "github": ""
+    },
+    {
+      "title": "Eye Guardian",
+      "description": "‘eye-guardian’은 사용자의 눈 건강을 해치는 습관들을 감지 및 교정해주는 프로그램입니다.",
+      "tags": ["Electron.js", "Vue.js", "Tensorflow"],
+      "period": "2021-07 ~ 2021-08",
+      "blog": "https://velog.io/@dev2820/프로젝트-eye-guardian-시력보호-가이드-프로그램-짧은-개발-후기",
+      "github": "https://github.com/dev2820/eye-guardian"
+    }
+  ],
+  "contact": {
+    "address": {
+      "title": "Address",
+      "subtitle": "Seoul in Korea",
+      "link": "https://goo.gl/maps/Gz7rsBFS1dEWN7TS9"
+    },
+    "blog": {
+      "title": "Blog",
+      "subtitle": "velog",
+      "link": "https://velog.io/@dev2820"
+    },
+    "email": {
+      "title": "Email",
+      "subtitle": "second28200@gmail.com",
+      "link": "mailto:second28200@gmail.com"
+    },
+    "github": {
+      "title": "Github",
+      "subtitle": "dev2820",
+      "link": "https://github.com/dev2820"
+    }
+  }
 }
