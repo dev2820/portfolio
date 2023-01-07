@@ -3,16 +3,16 @@
     <TextTitle icon="user-circle">Skills & Tools</TextTitle>
     <div class="folder-grid">
       <FolderCard
-        v-if="skillsAndTools['web FE'].length > 0"
-        title="웹 프론트"
-        :items="skillsAndTools['web FE']"
+        v-if="skillsAndTools['Front End'].length > 0"
+        :title="skillFiledNames['FE']"
+        :items="skillsAndTools['Front End']"
         data-aos="zoom-in"
         data-aos-delay="100"
         data-aos-duration="500"
       ></FolderCard>
       <FolderCard
         v-if="skillsAndTools['Back End'].length > 0"
-        title="백엔드"
+        :title="skillFiledNames['BE']"
         :items="skillsAndTools['Back End']"
         data-aos="zoom-in"
         data-aos-delay="300"
@@ -20,7 +20,7 @@
       ></FolderCard>
       <FolderCard
         v-if="skillsAndTools['Language'].length > 0"
-        title="언어"
+        :title="skillFiledNames['Lang']"
         :items="skillsAndTools['Language']"
         data-aos="zoom-in"
         data-aos-delay="100"
@@ -28,7 +28,7 @@
       ></FolderCard>
       <FolderCard
         v-if="skillsAndTools['Others'].length > 0"
-        title="기타"
+        :title="skillFiledNames['Others']"
         :items="skillsAndTools['Others']"
         data-aos="zoom-in"
         data-aos-delay="300"
@@ -41,9 +41,15 @@
 <script lang="ts">
 import TextTitle from "@/components/Text/TextTitle.vue";
 import FolderCard from "@/components/Card/FolderCard.vue";
-
 import { defineComponent } from "vue";
-import { skillsAndTools } from "@/assets/meta.json";
+import {
+  skillsAndTools as skillsAndToolsKR,
+  skillFiledNames as skillFiledNamesKR,
+} from "@/i18n/meta.ko.json";
+import {
+  skillsAndTools as skillsAndToolsEN,
+  skillFiledNames as skillFiledNamesEN,
+} from "@/i18n/meta.en.json";
 export default defineComponent({
   name: "SkillsAndToolsView",
   props: {
@@ -55,7 +61,14 @@ export default defineComponent({
   components: { TextTitle, FolderCard },
   setup(props) {
     return {
-      skillsAndTools,
+      skillsAndTools:
+        window.navigator.language === "ko-KR"
+          ? skillsAndToolsKR
+          : skillsAndToolsEN,
+      skillFiledNames:
+        window.navigator.language === "ko-KR"
+          ? skillFiledNamesKR
+          : skillFiledNamesEN,
     };
   },
 });
@@ -89,4 +102,3 @@ export default defineComponent({
   }
 }
 </style>
-

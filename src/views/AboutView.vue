@@ -3,10 +3,10 @@
     <TextTitle icon="user-circle">About me</TextTitle>
     <article class="content">
       <div class="introduce" data-aos="fade-right">
-        <strong>{{about.firstLine}}</strong>
-        {{about.introduce}}
+        <strong>{{ about.firstLine }}</strong>
+        {{ about.introduce }}
       </div>
-      <ProfileCard class="profile-image"/>
+      <ProfileCard class="profile-image" />
     </article>
   </section>
 </template>
@@ -14,22 +14,22 @@
 <script lang="ts">
 import ProfileCard from "@/components/Card/ProfileCard.vue";
 import TextTitle from "@/components/Text/TextTitle.vue";
-import { defineComponent,ref,toRef, } from "vue";
-import { about } from "@/assets/meta.json"
+import { defineComponent, ref, toRef } from "vue";
+import { about } from "@/i18n/meta.ko.json";
 export default defineComponent({
   name: "AboutView",
   props: {
     isDarkmode: {
       type: Boolean,
       default: false,
-    }
+    },
   },
-  components: {ProfileCard,TextTitle},
+  components: { ProfileCard, TextTitle },
   setup(props) {
     const goNextHandler = () => {
-      window.location.href = "#about"
-    }
-    const isDarkmodeRef = toRef(props,'isDarkmode')
+      window.location.href = "#about";
+    };
+    const isDarkmodeRef = toRef(props, "isDarkmode");
     return {
       about,
       goNextHandler,
@@ -39,16 +39,15 @@ export default defineComponent({
 });
 </script>
 <style lang="scss" scoped>
-
 @media (min-width: 758px) and (max-width: 999px) {
   #about {
     .content {
-      flex-direction:column-reverse;
+      flex-direction: column-reverse;
       .profile-image {
-        margin:0 auto 4rem auto;
-      };
+        margin: 0 auto 4rem auto;
+      }
       .introduce {
-        margin:0 auto;
+        margin: 0 auto;
       }
     }
   }
@@ -56,42 +55,40 @@ export default defineComponent({
 @media (min-width: 335px) and (max-width: 758px) {
   #about {
     .content {
-      flex-direction:column-reverse;
+      flex-direction: column-reverse;
       .profile-image {
-        margin:0 auto 4rem auto;
-      };
+        margin: 0 auto 4rem auto;
+      }
       .introduce {
-        margin:0 auto;
+        margin: 0 auto;
       }
     }
   }
 }
 #about {
-  padding:80px 0;
-  height:100%;
-  width:100%;
+  padding: 80px 0;
+  height: 100%;
+  width: 100%;
   .content {
-    position:relative;
-    display:flex;
+    position: relative;
+    display: flex;
     justify-content: space-between;
     & > * {
-      margin:auto 0;
-    };
+      margin: auto 0;
+    }
     div.introduce {
-      max-width:440px;
-      font-size:var(--xl);
-      color:var(--secondary-text);
-      line-height:2rem;
+      max-width: 440px;
+      font-size: var(--xl);
+      color: var(--secondary-text);
+      line-height: 2rem;
       strong {
-        color:var(--regular-text);
-        font-size:var(--2xl);
+        color: var(--regular-text);
+        font-size: var(--2xl);
       }
     }
     .profile-image {
-      position:relative;
+      position: relative;
     }
   }
 }
-
 </style>
-

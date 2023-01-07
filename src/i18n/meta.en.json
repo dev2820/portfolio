@@ -1,0 +1,164 @@
+{
+  "more": "show more",
+  "anchor": [
+    {
+      "title": "Home",
+      "link": "#home"
+    },
+    {
+      "title": "About",
+      "link": "#about"
+    },
+    {
+      "title": "Skill",
+      "link": "#skills-and-tools"
+    },
+    {
+      "title": "Projects",
+      "link": "#projects"
+    },
+    {
+      "title": "Contact",
+      "link": "#contact"
+    }
+  ],
+  "home": {
+    "position": "FE",
+    "job": "Web Developer",
+    "name": "Gijo Yang",
+    "iam": "",
+    "greeting": "Greeting! I am a"
+  },
+  "about": {
+    "introduce": "I am a developer who is studying the web in Korea. I study FE as the main subject, but i also study the concept of BE in my spare time to understand the whole system. I'm always thinking about making a better team.",
+    "firstLine": "Constantly evolving web front-end developer."
+  },
+  "skillFiledNames": {
+    "FE": "Web Front-end",
+    "BE": "Back-end",
+    "Lang": "Language",
+    "Others": "Others"
+  },
+  "skillsAndTools": {
+    "Front End": [
+      {
+        "icon": "vue",
+        "proficiency": "Proficiency"
+      },
+      {
+        "icon": "tailwind-css",
+        "proficiency": "Intermediate"
+      },
+      {
+        "icon": "storybook",
+        "proficiency": "Intermediate"
+      },
+      {
+        "icon": "jest",
+        "proficiency": "Intermediate"
+      }
+    ],
+    "Back End": [
+      {
+        "icon": "express",
+        "proficiency": "Beginner"
+      },
+      {
+        "icon": "nodejs",
+        "proficiency": "Beginner"
+      },
+      {
+        "icon": "docker",
+        "proficiency": "Beginner"
+      }
+    ],
+    "Language": [
+      {
+        "icon": "javascript",
+        "proficiency": "Proficiency"
+      },
+      {
+        "icon": "typescript",
+        "proficiency": "Proficiency"
+      }
+    ],
+    "Others": [
+      {
+        "icon": "figma",
+        "proficiency": "Proficiency"
+      }
+    ]
+  },
+  "projects": [
+    {
+      "title": "Broadcasting",
+      "description": "Broadcasting is a State management library available in chrome extensions",
+      "tags": ["Typescript", "Jest"],
+      "period": "2022-12 ~ 2023-01",
+      "blog": "https://velog.io/@dev2820/copy-stack-Broadcast-스토어-설계",
+      "github": "https://github.com/dev2820/broadcasting"
+    },
+    {
+      "title": "곰국 뷰어",
+      "description": "This is a PDF Viewer dedicated to papers for college students. The goal is to improve the paper reading experience by combining and providing various tools used to read papers.",
+      "tags": ["Vue3", "Typescript", "PDF.js", "editor.js", "Scss"],
+      "period": "2022-09 ~ 2022-12",
+      "blog": "https://velog.io/@dev2820/%EA%B3%B0%EA%B5%AD-%EB%B7%B0%EC%96%B4-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%ED%9A%8C%EA%B3%A0",
+      "github": "https://github.com/ssu-memorier/gomguk-viewer-fe"
+    },
+    {
+      "title": "Sweather",
+      "description": "This is the 'Clothes Recommendation App by Temperature' that started with the theme of 'Can I reduce the time to think about what to wear?'",
+      "tags": ["Flutter", "Firebase"],
+      "period": "2022-03 ~ 2022-05",
+      "blog": "https://velog.io/@dev2820/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-Sweater-%ED%9A%8C%EA%B3%A0-%EC%A2%8B%EC%95%98%EB%8D%98-%EC%A0%90",
+      "github": "https://github.com/team-naming-1-hour/sweater-app"
+    },
+    {
+      "title": "portfolio",
+      "description": "This is a portfolio web page that I created to create a portfolio that shows my personality to the fullest.",
+      "tags": ["Vue.js", "Figma", "AOS", "Scss", "Typescript"],
+      "period": "2022-03 ~ 2022-04",
+      "blog": "https://velog.io/@dev2820/포트폴리오-개발-정리",
+      "github": "https://github.com/dev2820/portfolio"
+    },
+    {
+      "title": "Predev",
+      "description": "It is a coding lecture search site that started from Unthinkable Question called 'Can we make a school for developers?' The source code cannot be disclosed because it belongs to Kakao Brain.",
+      "tags": ["Vue.js", "composition api", "Tailwind CSS", "Storybook"],
+      "period": "2021-12 ~ 2022-02",
+      "blog": "https://velog.io/@dev2820/카카오-브레인-패스파인더-스프린트-0주차",
+      "github": ""
+    },
+    {
+      "title": "Eye Guardian",
+      "description": "'eye-guardian' is a program that detects and corrects habits that harm the user's eye health.",
+      "tags": ["Electron.js", "Vue.js", "Tensorflow"],
+      "period": "2021-07 ~ 2021-08",
+      "blog": "https://velog.io/@dev2820/프로젝트-eye-guardian-시력보호-가이드-프로그램-짧은-개발-후기",
+      "github": "https://github.com/dev2820/eye-guardian"
+    }
+  ],
+  "contact": {
+    "address": {
+      "title": "Address",
+      "subtitle": "Seoul in Korea",
+      "link": "https://goo.gl/maps/Gz7rsBFS1dEWN7TS9"
+    },
+    "blog": {
+      "title": "Blog",
+      "subtitle": "velog",
+      "link": "https://velog.io/@dev2820"
+    },
+    "email": {
+      "title": "Email",
+      "subtitle": "second28200@gmail.com",
+      "link": "mailto:second28200@gmail.com"
+    },
+    "github": {
+      "title": "Github",
+      "subtitle": "dev2820",
+      "link": "https://github.com/dev2820"
+    }
+  }
+}
