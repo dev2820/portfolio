@@ -23,67 +23,67 @@
   ],
   "home": {
     "position": "FE",
-    "job": "웹 개발자",
-    "name": "양기조"
+    "job": "Web Developer",
+    "name": "Gijo Yang"
   },
   "about": {
-    "introduce": "한국에서 웹을 공부하고 있는 개발자입니다. FE를 메인으로 공부하지만 시스템 전체를 이해하기 위해 BE의 개념도 틈틈히 공부합니다. 항상 더 나은 팀을 만들기 위해 고민하고 있습니다.",
-    "firstLine": "안녕하세요. 지속적으로 발전하는 웹 FE 개발자 양기조입니다."
+    "introduce": "I am a developer who is studying the web in Korea 🇰🇷 I study FE as the main subject, but i also study the concept of BE in my spare time to understand the whole system. I'm always thinking about making a better team.",
+    "firstLine": "Constantly evolving web front-end developer"
   },
   "skillsAndTools": {
     "web FE": [
       {
         "icon": "vue",
-        "proficiency": "업무 활용 가능 수준"
+        "proficiency": "Available in the field"
       },
       {
         "icon": "tailwind-css",
-        "proficiency": "업무 활용 가능 수준"
+        "proficiency": "Available in the field"
       },
       {
         "icon": "storybook",
-        "proficiency": "간단한 기능 구현 수준"
+        "proficiency": "Simple level of functionality implementation"
       },
       {
         "icon": "jest",
-        "proficiency": "간단한 기능 구현 수준"
+        "proficiency": "Simple level of functionality implementation"
       }
     ],
     "Back End": [
       {
         "icon": "express",
-        "proficiency": "간단한 기능 구현 수준"
+        "proficiency": "Simple level of functionality implementation"
       },
       {
         "icon": "nodejs",
-        "proficiency": "간단한 기능 구현 수준"
+        "proficiency": "Simple level of functionality implementation"
       },
       {
         "icon": "docker",
-        "proficiency": "간단한 기능 구현 수준"
+        "proficiency": "Simple level of functionality implementation"
       }
     ],
     "Language": [
       {
         "icon": "javascript",
-        "proficiency": "업무 활용 가능 수준"
+        "proficiency": "Available in the field"
       },
       {
         "icon": "typescript",
-        "proficiency": "업무 활용 가능 수준"
+        "proficiency": "Available in the field"
       }
     ],
     "Others": [
       {
         "icon": "figma",
-        "proficiency": "업무 활용 가능 수준"
+        "proficiency": "Available in the field"
       }
     ]
   },
   "projects": [
     {
       "title": "Broadcasting",
-      "description": "Broadcasting은 크롬 익스텐션에서 사용 가능한 상태 관리 라이브러리입니다.",
+      "description": "Broadcasting is a State management library available in chrome extensions",
       "tags": ["Typescript", "Jest"],
       "period": "2022-12 ~ 2023-01",
       "blog": "https://velog.io/@dev2820/copy-stack-Broadcast-스토어-설계",
@@ -91,7 +91,7 @@
     },
     {
       "title": "곰국 뷰어",
-      "description": "대학생들을 위한 논문 전용 PDF Viewer 입니다. 논문을 읽을 때 사용하는 여러 가지 툴들을 종합하여 제공하여 논문 읽기 경험을 개선하는 것을 목표로 두고 있습니다.",
+      "description": "This is a PDF Viewer dedicated to papers for college students. The goal is to improve the paper reading experience by combining and providing various tools used to read papers.",
       "tags": ["Vue3", "Typescript", "PDF.js", "editor.js", "Scss"],
       "period": "2022-09 ~ 2022-12",
       "blog": "https://velog.io/@dev2820/%EA%B3%B0%EA%B5%AD-%EB%B7%B0%EC%96%B4-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%ED%9A%8C%EA%B3%A0",
@@ -99,7 +99,7 @@
     },
     {
       "title": "Sweather",
-      "description": "'뭘 입을지 고민하는 시간을 줄여줄 수 있을까?' 라는 주제로 출발하여 제작하게 된 '기온별 의상 추천 앱' 입니다.",
+      "description": "This is the 'Clothes Recommendation App by Temperature' that started with the theme of 'Can I reduce the time to think about what to wear?'",
       "tags": ["Flutter", "Firebase"],
       "period": "2022-03 ~ 2022-05",
       "blog": "https://velog.io/@dev2820/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-Sweater-%ED%9A%8C%EA%B3%A0-%EC%A2%8B%EC%95%98%EB%8D%98-%EC%A0%90",
@@ -107,7 +107,7 @@
     },
     {
       "title": "portfolio",
-      "description": "개성이 최대로 드러나는 포트폴리오를 작성하고 싶어 만들게된 포트폴리오 웹페이지입니다. ",
+      "description": "This is a portfolio web page that I created to create a portfolio that shows my personality to the fullest.",
       "tags": ["Vue.js", "Figma", "AOS", "Scss", "Typescript"],
       "period": "2022-03 ~ 2022-04",
       "blog": "https://velog.io/@dev2820/포트폴리오-개발-정리",
@@ -115,7 +115,7 @@
     },
     {
       "title": "Predev",
-      "description": "'개발자를 위한 학교를 만들 수 있을까?' 라는 Unthinkable Question에서 출발한 코딩 강의 검색 사이트 입니다. 소스코드는 카카오브레인 소속이라 공개할 수 없습니다.",
+      "description": "It is a coding lecture search site that started from Unthinkable Question called 'Can we make a school for developers?' The source code cannot be disclosed because it belongs to Kakao Brain.",
       "tags": ["Vue.js", "composition api", "Tailwind CSS", "Storybook"],
       "period": "2021-12 ~ 2022-02",
       "blog": "https://velog.io/@dev2820/카카오-브레인-패스파인더-스프린트-0주차",
@@ -123,7 +123,7 @@
     },
     {
       "title": "Eye Guardian",
-      "description": "'eye-guardian'은 사용자의 눈 건강을 해치는 습관들을 감지 및 교정해주는 프로그램입니다.",
+      "description": "'eye-guardian' is a program that detects and corrects habits that harm the user's eye health.",
       "tags": ["Electron.js", "Vue.js", "Tensorflow"],
       "period": "2021-07 ~ 2021-08",
       "blog": "https://velog.io/@dev2820/프로젝트-eye-guardian-시력보호-가이드-프로그램-짧은-개발-후기",
