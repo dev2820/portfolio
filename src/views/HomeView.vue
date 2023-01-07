@@ -13,12 +13,12 @@
       src="@/assets/myMoon.webp"
     />
     <img class="character" src="@/assets/myCharacter.webp" />
-    <p class="greeting" :class="{ show: showAfter300 }">{{ greeting }}</p>
+    <p class="greeting" :class="{ show: showAfter300 }">{{ home.greeting }}</p>
     <p class="job" :class="{ show: showAfter1000 }">
-      <font>{{ position }}</font> {{ job }}
+      <font>{{ home.position }}</font> {{ home.job }}
     </p>
     <p class="name" :class="{ show: showAfter1700 }">
-      <font>{{ name }}</font> {{ iam }}
+      <font>{{ home.name }}</font> {{ home.iam }}
     </p>
     <ArrowButton
       class="go-next"
@@ -31,8 +31,10 @@
 
 <script lang="ts">
 import ArrowButton from "@/components/Button/ArrowButton.vue";
-import { defineComponent, ref, toRef, onMounted } from "vue";
-import { home } from "@/i18n/meta.ko.json";
+import { defineComponent, ref, toRef, onMounted, watch } from "vue";
+import { home as homeKR } from "@/i18n/meta.ko.json";
+import { home as homeEN } from "@/i18n/meta.en.json";
+import language from "@/store/language";
 export default defineComponent({
   name: "BannerView",
   props: {
@@ -63,12 +65,16 @@ export default defineComponent({
         showAfter1700.value = true;
       }, 1700);
     });
+    const home = ref(homeKR);
+    watch(language.lang, (newLang) => {
+      if (newLang === "ko-KR") {
+        home.value = homeKR;
+      } else {
+        home.value = homeEN;
+      }
+    });
     return {
-      greeting: home.greeting,
-      position: home.position,
-      job: home.job,
-      name: home.name,
-      iam: home.iam,
+      home,
       goNextHandler,
       isDarkmodeRef,
       showAfter300,

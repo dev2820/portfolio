@@ -54,9 +54,10 @@ import mappin3dIcon from "@/assets/png/mappin3dIcon.webp";
 import pencil3dIcon from "@/assets/png/pencil3dIcon.webp";
 import email3dIcon from "@/assets/png/email3dIcon.webp";
 import Octocat from "@/assets/png/Octocat.webp";
-import { contact } from "@/assets/meta.json";
-import { defineComponent, ref, toRef } from "vue";
-import { skillsAndTools } from "@/i18n/meta.ko.json";
+import { contact as contactKR } from "@/i18n/meta.ko.json";
+import { contact as contactEN } from "@/i18n/meta.en.json";
+import { defineComponent, ref, watch } from "vue";
+import language from "@/store/language";
 export default defineComponent({
   name: "SkillsAndToolsView",
   props: {
@@ -67,12 +68,20 @@ export default defineComponent({
   },
   components: { TextTitle, CloudCard },
   setup(props) {
+    const contact = ref(contactKR);
+    watch(language.lang, (newLang) => {
+      if (newLang === "ko-KR") {
+        contact.value = contactKR;
+      } else {
+        contact.value = contactEN;
+      }
+    });
+
     return {
       email3dIcon,
       pencil3dIcon,
       mappin3dIcon,
       Octocat,
-      skillsAndTools,
       contact,
     };
   },

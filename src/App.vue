@@ -9,6 +9,10 @@
   </span>
   <header>
     <global-navigation-bar :anchors="anchor" />
+    <select @change="handleLanguageChange">
+      <option value="ko-KR" :selected="lang === 'ko-KR'">KR</option>
+      <option value="en-EN" :selected="lang === 'en-EN'">EN</option>
+    </select>
   </header>
   <main>
     <HomeView :isDarkmode="isDarkmodeRef"></HomeView>
@@ -51,7 +55,7 @@ import SkillsAndToolsView from "./views/SkillsAndToolsView.vue";
 import ProjectsView from "./views/ProjectsView.vue";
 import ContactView from "./views/ContactView.vue";
 import AOS from "aos";
-
+import language from "@/store/language";
 import ArrowButton from "@/components/Button/ArrowButton.vue";
 export default defineComponent({
   components: {
@@ -90,6 +94,16 @@ export default defineComponent({
       localStorage.setItem("isDarkmode", newVal ? "dark" : "light");
     });
 
+    const handleLanguageChange = (
+      evt: Event | { target: { value: string } }
+    ) => {
+      const target = evt.target as { value: string };
+      if (!target) return;
+
+      const newLang = target.value as string;
+      language.changeLang(newLang);
+    };
+
     AOS.init();
     return {
       anchor,
@@ -106,6 +120,8 @@ export default defineComponent({
         document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
       },
       isDarkmodeRef,
+      handleLanguageChange,
+      lang: language.lang,
     };
   },
 });

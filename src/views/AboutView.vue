@@ -14,8 +14,10 @@
 <script lang="ts">
 import ProfileCard from "@/components/Card/ProfileCard.vue";
 import TextTitle from "@/components/Text/TextTitle.vue";
-import { defineComponent, ref, toRef } from "vue";
-import { about } from "@/i18n/meta.ko.json";
+import { defineComponent, ref, toRef, watch } from "vue";
+import { about as aboutKR } from "@/i18n/meta.ko.json";
+import { about as aboutEN } from "@/i18n/meta.en.json";
+import language from "@/store/language";
 export default defineComponent({
   name: "AboutView",
   props: {
@@ -30,6 +32,14 @@ export default defineComponent({
       window.location.href = "#about";
     };
     const isDarkmodeRef = toRef(props, "isDarkmode");
+    const about = ref(aboutKR);
+    watch(language.lang, (newLang) => {
+      if (newLang === "ko-KR") {
+        about.value = aboutKR;
+      } else {
+        about.value = aboutEN;
+      }
+    });
     return {
       about,
       goNextHandler,

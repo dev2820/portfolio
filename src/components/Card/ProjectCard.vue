@@ -2,20 +2,22 @@
   <div class="card">
     <div class="main-info">
       <div class="content">
-        <h3 class="title">{{ title }}</h3>
-        <p class="description">{{ description }}</p>
+        <h3 class="title">{{ project?.title }}</h3>
+        <p class="description">{{ project?.description }}</p>
       </div>
       <div class="tag-list">
-        <span class="tag" v-for="tag in tags" :key="tag">#{{ tag }} </span>
+        <span class="tag" v-for="tag in project?.tags" :key="tag"
+          >#{{ tag }}
+        </span>
       </div>
     </div>
     <hr />
     <div class="additional-info">
-      <span class="period">{{ period }}</span>
+      <span class="period">{{ project?.period }}</span>
       <a
         class="blog-icon"
-        v-if="blog ? blog.length > 0 : false"
-        :href="blog"
+        v-if="project?.blog ? project?.blog.length > 0 : false"
+        :href="project?.blog"
         title="프로젝트 후기"
         target="_blank"
       >
@@ -23,8 +25,8 @@
       </a>
       <a
         class="github-icon"
-        v-if="github ? github.length > 0 : false"
-        :href="github"
+        v-if="project?.github ? project.github.length > 0 : false"
+        :href="project?.github"
         title="깃허브 링크"
         target="_blank"
       >
@@ -35,7 +37,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent, watch, toRefs } from "vue";
 import githubIcon from "@/assets/svg/brand-github.svg";
 import blogIcon from "@/assets/svg/blog.svg";
 import IProject from "@/interfaces/IProject";
@@ -50,12 +52,6 @@ export default defineComponent({
     return {
       githubIcon,
       blogIcon,
-      title: props.project?.title,
-      github: props.project?.github,
-      blog: props.project?.blog,
-      description: props.project?.description,
-      period: props.project?.period,
-      tags: props.project?.tags,
     };
   },
 });

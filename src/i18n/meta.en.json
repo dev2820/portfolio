@@ -99,7 +99,7 @@
       "github": "https://github.com/dev2820/broadcasting"
     },
     {
-      "title": "곰국 뷰어",
+      "title": "Gomguk Viewer",
       "description": "This is a PDF Viewer dedicated to papers for college students. The goal is to improve the paper reading experience by combining and providing various tools used to read papers.",
       "tags": ["Vue3", "Typescript", "PDF.js", "editor.js", "Scss"],
       "period": "2022-09 ~ 2022-12",

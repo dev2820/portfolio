@@ -1,6 +1,6 @@
 <template>
   <section id="skills-and-tools">
-    <TextTitle icon="user-circle">Skills & Tools</TextTitle>
+    <TextTitle icon="user-circle">{{ "Skills & Tools" }}</TextTitle>
     <div class="folder-grid">
       <FolderCard
         v-if="skillsAndTools['Front End'].length > 0"
@@ -41,7 +41,7 @@
 <script lang="ts">
 import TextTitle from "@/components/Text/TextTitle.vue";
 import FolderCard from "@/components/Card/FolderCard.vue";
-import { defineComponent } from "vue";
+import { defineComponent, watch, ref } from "vue";
 import {
   skillsAndTools as skillsAndToolsKR,
   skillFiledNames as skillFiledNamesKR,
@@ -50,6 +50,7 @@ import {
   skillsAndTools as skillsAndToolsEN,
   skillFiledNames as skillFiledNamesEN,
 } from "@/i18n/meta.en.json";
+import language from "@/store/language";
 export default defineComponent({
   name: "SkillsAndToolsView",
   props: {
@@ -60,15 +61,20 @@ export default defineComponent({
   },
   components: { TextTitle, FolderCard },
   setup(props) {
+    const skillsAndTools = ref(skillsAndToolsKR);
+    const skillFiledNames = ref(skillFiledNamesKR);
+    watch(language.lang, (newLang) => {
+      if (newLang === "ko-KR") {
+        skillsAndTools.value = skillsAndToolsKR;
+        skillFiledNames.value = skillFiledNamesKR;
+      } else {
+        skillsAndTools.value = skillsAndToolsEN;
+        skillFiledNames.value = skillFiledNamesEN;
+      }
+    });
     return {
-      skillsAndTools:
-        window.navigator.language === "ko-KR"
-          ? skillsAndToolsKR
-          : skillsAndToolsEN,
-      skillFiledNames:
-        window.navigator.language === "ko-KR"
-          ? skillFiledNamesKR
-          : skillFiledNamesEN,
+      skillsAndTools,
+      skillFiledNames,
     };
   },
 });
