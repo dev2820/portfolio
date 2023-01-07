@@ -9,7 +9,7 @@
   </span>
   <header>
     <global-navigation-bar :anchors="anchor" />
-    <select @change="handleLanguageChange">
+    <select id="langOption" @change="handleLanguageChange">
       <option value="ko-KR" :selected="lang === 'ko-KR'">KR</option>
       <option value="en-EN" :selected="lang === 'en-EN'">EN</option>
     </select>
@@ -189,6 +189,29 @@ body {
     backdrop-filter: var(--glass-drop-shadow);
     &:hover {
       background: var(--glass-background-variant);
+    }
+
+    #langOption {
+      width: 60px;
+      height: 30px;
+      background-color: transparent;
+      color: var(--onSurface);
+      position: absolute;
+      top: 50%;
+      margin-top: -15px;
+      right: 2rem;
+      border: none;
+      border-radius: 0.25rem;
+      cursor: pointer;
+      &:focus {
+        outline: none;
+        background-color: var(--primary-500);
+        color: var(--on-primary);
+      }
+      option {
+        background-color: var(--primary-500);
+        color: var(--on-primary);
+      }
     }
   }
   main {
