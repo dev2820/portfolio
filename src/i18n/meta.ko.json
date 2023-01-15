@@ -30,8 +30,8 @@
     "greeting": "안녕하세요"
   },
   "about": {
-    "introduce": "한국에서 웹을 공부하고 있는 개발자입니다. FE를 메인으로 공부하지만 시스템 전체를 이해하기 위해 BE의 개념도 틈틈히 공부합니다. 항상 더 나은 팀을 만들기 위해 고민하고 있습니다.",
-    "firstLine": "안녕하세요. 지속적으로 발전하는 웹 FE 개발자 양기조입니다."
+    "introduce": "FE를 메인으로 공부하지만 시스템 전체를 이해하기 위해 BE의 개념도 틈틈히 공부하고 있습니다. 항상 더 나은 팀을 만들기 위해 고민하고 있습니다.",
+    "firstLine": "안녕하세요. 지속적으로 함께 성장하는 웹 FE 개발자 양기조입니다."
   },
   "skillFiledNames": {
     "FE": "웹 프론트",
@@ -91,12 +91,12 @@
   },
   "projects": [
     {
-      "title": "Broadcasting",
-      "description": "Broadcasting은 크롬 익스텐션에서 사용 가능한 상태 관리 라이브러리입니다.",
-      "tags": ["Typescript", "Jest"],
+      "title": "Copy Stack",
+      "description": "'Copy Stack'은 클립보드를 관리하는데 도움을 주는 크롬 익스텐션입니다. 깃허브를 통해 배포 링크로 갈 수 있습니다.",
+      "tags": ["Lit", "Typescript", "Jest"],
       "period": "2022-12 ~ 2023-01",
-      "blog": "https://velog.io/@dev2820/copy-stack-Broadcast-스토어-설계",
-      "github": "https://github.com/dev2820/broadcasting"
+      "blog": "https://velog.io/@dev2820/series/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-Copy-Stack",
+      "github": "https://github.com/dev2820/copy-stack"
     },
     {
       "title": "곰국 뷰어",
