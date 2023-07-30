@@ -1,4 +1,8 @@
 <template id="app">
+  <select id="langOption" @change="handleLanguageChange">
+    <option value="ko-KR" :selected="lang === 'ko-KR'">KR</option>
+    <option value="en-EN" :selected="lang === 'en-EN'">EN</option>
+  </select>
   <span class="darkmode-toggle">
     <darkmode-toggle
       class="darkmode-toggle"
@@ -9,10 +13,6 @@
   </span>
   <header>
     <global-navigation-bar :anchors="anchor" />
-    <select id="langOption" @change="handleLanguageChange">
-      <option value="ko-KR" :selected="lang === 'ko-KR'">KR</option>
-      <option value="en-EN" :selected="lang === 'en-EN'">EN</option>
-    </select>
   </header>
   <main>
     <HomeView :isDarkmode="isDarkmodeRef"></HomeView>
@@ -190,29 +190,6 @@ body {
     &:hover {
       background: var(--glass-background-variant);
     }
-
-    #langOption {
-      width: 60px;
-      height: 30px;
-      background-color: transparent;
-      color: var(--onSurface);
-      position: absolute;
-      top: 50%;
-      margin-top: -15px;
-      right: 2rem;
-      border: none;
-      border-radius: 0.25rem;
-      cursor: pointer;
-      &:focus {
-        outline: none;
-        background-color: var(--primary-500);
-        color: var(--on-primary);
-      }
-      option {
-        background-color: var(--primary-500);
-        color: var(--on-primary);
-      }
-    }
   }
   main {
     display: flex;
@@ -237,6 +214,27 @@ body {
       height: 9rem;
       margin: 2rem auto;
     }
+  }
+}
+#langOption {
+  width: 60px;
+  height: 30px;
+  background-color: transparent;
+  color: var(--onSurface);
+  position: fixed;
+  left: 1rem;
+  bottom: 1rem;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  &:focus {
+    outline: none;
+    background-color: var(--primary-500);
+    color: var(--on-primary);
+  }
+  option {
+    background-color: var(--primary-500);
+    color: var(--on-primary);
   }
 }
 .darkmode-toggle {
