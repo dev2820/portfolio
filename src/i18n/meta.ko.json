@@ -47,7 +47,7 @@
       },
       {
         "icon": "tailwind-css",
-        "proficiency": "프로젝트에 적용 가능"
+        "proficiency": "업무 활용 가능"
       },
       {
         "icon": "storybook",
@@ -55,17 +55,21 @@
       },
       {
         "icon": "jest",
-        "proficiency": "프로젝트에 적용 가능"
+        "proficiency": "업무 활용 가능"
+      },
+      {
+        "icon": "react",
+        "proficiency": "업무 활용 가능"
       }
     ],
     "Back End": [
       {
         "icon": "express",
-        "proficiency": "간단한 기능 구현"
+        "proficiency": "프로젝트에 적용 가능"
       },
       {
         "icon": "nodejs",
-        "proficiency": "간단한 기능 구현"
+        "proficiency": "프로젝트에 적용 가능"
       },
       {
         "icon": "docker",

@@ -47,7 +47,7 @@
       },
       {
         "icon": "tailwind-css",
-        "proficiency": "Intermediate"
+        "proficiency": "Proficiency"
       },
       {
         "icon": "storybook",
@@ -55,21 +55,21 @@
       },
       {
         "icon": "jest",
-        "proficiency": "Intermediate"
+        "proficiency": "Proficiency"
       }
     ],
     "Back End": [
       {
         "icon": "express",
-        "proficiency": "Beginner"
+        "proficiency": "Intermediate"
       },
       {
         "icon": "nodejs",
-        "proficiency": "Beginner"
+        "proficiency": "Intermediate"
       },
       {
         "icon": "docker",
-        "proficiency": "Beginner"
+        "proficiency": "beginner"
       }
     ],
     "Language": [

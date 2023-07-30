@@ -22,30 +22,85 @@ icon 같은 경우 이와 같은 형식으로 이미지 위치 조절을 통해 
 .vscode,
 .sass,
 .git,
-.flutter {
-    background: url("@/assets/png/iconSprite.webp") no-repeat;
+.flutter,
+.notion,
+.lit,
+.react {
+  width: 5rem;
+  height: 5rem;
+  background: url("@/assets/png/iconSprite.png") no-repeat;
 }
 
-.vue {width:5rem;height:5rem;background-position:0px 0px; }
-.tailwind-css {width:5rem;height:5rem;background-position:-80px 0px;}
-.nodejs {width:5rem;height:5rem;background-position:calc(-80*2px) 0px; }
-.docker {width:5rem;height:5rem;background-position:calc(-80*3px) 0px; }
-.ubuntu {width:5rem;height:5rem;background-position:calc(-80*4px) 0px; }
+.vue {
+  background-position: 0px 0px;
+}
+.tailwind-css {
+  background-position: calc(-1 * 5rem) 0px;
+}
+.nodejs {
+  background-position: calc(-2 * 5rem) 0px;
+}
+.docker {
+  background-position: calc(-3 * 5rem) 0px;
+}
+.ubuntu {
+  background-position: calc(-4 * 5rem) 0px;
+}
 
-.typescript {width:5rem;height:5rem;background-position:0px -80px; }
-.github {width:5rem;height:5rem;background-position:calc(-80*1px) -80px; }
-.figma {width:5rem;height:5rem;background-position:calc(-80*2px) -80px; }
-.nuxt {width:5rem;height:5rem;background-position:calc(-80*3px) -80px; }
-.storybook {width:5rem;height:5rem;background-position:calc(-80*4px) -80px; }
+.typescript {
+  background-position: 0px -5rem;
+}
+.github {
+  background-position: calc(-80 * 1px) -5rem;
+}
+.figma {
+  background-position: calc(-80 * 2px) -5rem;
+}
+.nuxt {
+  background-position: calc(-80 * 3px) -5rem;
+}
+.storybook {
+  background-position: calc(-80 * 4px) -5rem;
+}
 
-.jenkins {width:5rem;height:5rem;background-position:0px calc(-80*2px); }
-.cplusplus {width:5rem;height:5rem;background-position:calc(-80*1px) calc(-80*2px); }
-.javascript {width:5rem;height:5rem;background-position:calc(-80*2px) calc(-80*2px); }
-.express {width:5rem;height:5rem;background-position:calc(-80*3px) calc(-80*2px); }
-.jest {width:5rem;height:5rem;background-position:calc(-80*4px) calc(-80*2px); }
+.jenkins {
+  background-position: 0px calc(-5rem * 2);
+}
+.cplusplus {
+  background-position: calc(-5rem * 1) calc(-5rem * 2);
+}
+.javascript {
+  background-position: calc(-5rem * 2) calc(-5rem * 2);
+}
+.express {
+  background-position: calc(-5rem * 3) calc(-5rem * 2);
+}
+.jest {
+  background-position: calc(-5rem * 4) calc(-5rem * 2);
+}
 
-.mariadb {width:5rem;height:5rem;background-position:0px calc(-80*3px); }
-.vscode {width:5rem;height:5rem;background-position:calc(-80*1px) calc(-80*3px); }
-.sass {width:5rem;height:5rem;background-position:calc(-80*2px) calc(-80*3px); }
-.git {width:5rem;height:5rem;background-position:calc(-80*3px) calc(-80*3px); }
-.flutter {width:5rem;height:5rem;background-position:calc(-80*4px) calc(-80*3px); }
+.mariadb {
+  background-position: 0px calc(-5rem * 3);
+}
+.vscode {
+  background-position: calc(-5rem * 1) calc(-5rem * 3);
+}
+.sass {
+  background-position: calc(-5rem * 2) calc(-5rem * 3);
+}
+.git {
+  background-position: calc(-5rem * 3) calc(-5rem * 3);
+}
+.flutter {
+  background-position: calc(-5rem * 4) calc(-5rem * 3);
+}
+
+.notion {
+  background-position: 0px calc(-5rem * 4);
+}
+.lit {
+  background-position: calc(-5rem * 1) calc(-5rem * 4);
+}
+.react {
+  background-position: calc(-5rem * 2) calc(-5rem * 4);
+}
