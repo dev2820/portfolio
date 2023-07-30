@@ -46,7 +46,7 @@
 
 <script lang="ts">
 import { defineComponent, ref, watch } from "vue";
-import { anchor, contact } from "@/assets/meta.json";
+import { anchor, contact } from "@/i18n/meta.ko.json";
 import GlobalNavigationBar from "./components/GlobalNavigationBar/GlobalNavigationBar.vue";
 import DarkmodeToggle from "./components/Toggle/DarkmodeToggle.vue";
 import HomeView from "./views/HomeView.vue";
